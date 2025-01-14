@@ -24,9 +24,9 @@ EOT;
 // Check whether client is allowed to trigger an update
 
 $allowed_ips = array(
-	'207.97.227.', '50.57.128.', '108.171.174.', '50.57.231.', '204.232.175.', '192.30.252.', // GitHub
+	'207.97.227.', '50.57.128.', '108.171.174.', '50.57.231.', '204.232.175.', '192.30.252.',
+  '192.30.252.','185.199.108.','140.82.112.','143.55.64.', // GitHub
 	'195.37.139.','193.174.', // VZG
-  '13.69.252.254'
 );
 $allowed = false;
 
@@ -60,7 +60,7 @@ flush();
 $commands = array(
 	'echo $PWD',
 	'whoami',
-	'git pull',
+	'git pull origine master',
 	'git status',
 	'git submodule sync',
 	'git submodule update',
