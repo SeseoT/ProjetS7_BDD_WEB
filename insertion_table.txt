@@ -75,7 +75,7 @@ VALUES
 (5, 'Arts Contemporains', '2024-09-05', '2024-09-15', 'Ouvert', 1),
 (6, 'Art en Nature', '2024-11-10', '2024-11-20', 'Préparation', 2);
 
--- Table Dessin (Un compétiteur peut déposer jusqu'à 3 dessins par concours)
+-- Table Dessin (Un compétiteur     peut déposer jusqu'à 3 dessins par concours)
 INSERT INTO Dessin (numDessin, commentaire, classement, dateRemise, leDessin, numConcours, numCompetiteur)
 VALUES
 (1, 'Tres beau rendu des couleurs.', 1, '2024-01-15', NULL, 1, 1),
