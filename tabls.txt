@@ -14,7 +14,7 @@ DROP TABLE IF EXISTS Club;
 
 
 
-/*Création des tables*/
+/*Creation des tables*/
 
 CREATE TABLE Club (
     numClub INT PRIMARY KEY,
@@ -23,14 +23,14 @@ CREATE TABLE Club (
     numTelephone VARCHAR(10),
     nombreAdherents INT,
     ville VARCHAR(100),
-    département VARCHAR(100),
-    région VARCHAR(100)
+    departement VARCHAR(100),
+    region VARCHAR(100)
 );
 
 CREATE TABLE Utilisateur (
     numUtilisateur INT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
-    prénom VARCHAR(100) NOT NULL,
+    prenom VARCHAR(100) NOT NULL,
     adresse VARCHAR(255) NOT NULL,
     login VARCHAR(50) UNIQUE NOT NULL,
     motDePasse VARCHAR(255) NOT NULL,
@@ -46,13 +46,13 @@ CREATE TABLE President (
 
 CREATE TABLE Administrateur (
     numAdministrateur INT PRIMARY KEY,
-    dateDébut DATE NOT NULL,
+    dateDebut DATE NOT NULL,
     FOREIGN KEY (numAdministrateur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE
 );
 
 CREATE TABLE Directeur (
     numDirecteur INT PRIMARY KEY,
-    dateDébut DATE NOT NULL,
+    dateDebut DATE NOT NULL,
     numClub INT NOT NULL,
     FOREIGN KEY (numDirecteur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE,
     FOREIGN KEY (numClub) REFERENCES Club(numClub) ON DELETE CASCADE
@@ -61,19 +61,19 @@ CREATE TABLE Directeur (
 
 CREATE TABLE Competiteur (
     numCompetiteur INT PRIMARY KEY,
-    datePremièreParticipation DATE,
+    datePremiereParticipation DATE,
     FOREIGN KEY (numCompetiteur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE
 );
 
 CREATE TABLE Concours (
     numConcours INT PRIMARY KEY,
-    thème VARCHAR(100) NOT NULL,
-    dateDébut DATE NOT NULL,
+    theme VARCHAR(100) NOT NULL,
+    dateDebut DATE NOT NULL,
     dateFin DATE NOT NULL,
-    état VARCHAR(50),
+    etat VARCHAR(50),
     numPresident INT NOT NULL,
     FOREIGN KEY (numPresident) REFERENCES President(numPresident) ON DELETE CASCADE,
-    CHECK (DATEDIFF(dateFin, dateDébut) >= 1) /*-- Vérifie que la date de fin est après la date de début*/
+    CHECK (DATEDIFF(dateFin, dateDebut) >= 1) /*-- Verifie que la date de fin est apres la date de debut*/
 );
 
 CREATE TABLE Dessin (
@@ -91,7 +91,7 @@ CREATE TABLE Dessin (
 
 CREATE TABLE Evaluateur (
     numEvaluateur INT PRIMARY KEY,
-    spécialité VARCHAR(100),
+    specialite VARCHAR(100),
     FOREIGN KEY (numEvaluateur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE
 );
 
