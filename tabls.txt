@@ -4,8 +4,8 @@ DROP TABLE IF EXISTS ClubParticipe;
 DROP TABLE IF EXISTS Evaluation;
 DROP TABLE IF EXISTS Dessin;
 DROP TABLE IF EXISTS Concours;
-DROP TABLE IF EXISTS Evaluateur;
 DROP TABLE IF EXISTS Competiteur;
+DROP TABLE IF EXISTS Evaluateur;
 DROP TABLE IF EXISTS Directeur;
 DROP TABLE IF EXISTS Administrateur;
 DROP TABLE IF EXISTS Président;
@@ -64,6 +64,7 @@ CREATE TABLE Concours (
     état VARCHAR(50),
     numPresident INT NOT NULL,
     FOREIGN KEY (numPresident) REFERENCES Président(numPresident) ON DELETE CASCADE
+    CHECK (DATEDIFF(dateFin, dateDébut) >= 1) -- Vérifie que la date de fin est après la date de début
 );
 
 CREATE TABLE Compétiteur (
@@ -84,6 +85,13 @@ CREATE TABLE Dessin (
     FOREIGN KEY (numCompétiteur) REFERENCES Compétiteur(numCompétiteur) ON DELETE CASCADE
 );
 
+
+CREATE TABLE Evaluateur (
+    numEvaluateur INT PRIMARY KEY,
+    spécialité VARCHAR(100),
+    FOREIGN KEY (numEvaluateur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE
+);
+
 CREATE TABLE Evaluation (
     dateEvaluation DATE NOT NULL,
     note DECIMAL(5, 2) NOT NULL,
@@ -93,12 +101,6 @@ CREATE TABLE Evaluation (
     PRIMARY KEY (dateEvaluation, numDessin, numEvaluateur),
     FOREIGN KEY (numDessin) REFERENCES Dessin(numDessin) ON DELETE CASCADE,
     FOREIGN KEY (numEvaluateur) REFERENCES Evaluateur(numEvaluateur) ON DELETE CASCADE
-);
-
-CREATE TABLE Evaluateur (
-    numEvaluateur INT PRIMARY KEY,
-    spécialité VARCHAR(100),
-    FOREIGN KEY (numEvaluateur) REFERENCES Utilisateur(numUtilisateur) ON DELETE CASCADE
 );
 
 CREATE TABLE ClubParticipe (
