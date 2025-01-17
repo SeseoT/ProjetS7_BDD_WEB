@@ -80,12 +80,16 @@ VALUES
 -- Table Directeur
 INSERT INTO Directeur (numDirecteur, dateDebut, numClub)
 VALUES
-(8, '2022-05-01', 1);
-(9, '2022-05-01', 2);
-(10, '2022-05-01', 3);
-(11, '2022-05-01', 4);
-(12, '2022-05-01', 5);
-(13, '2022-05-01', 6);
+    (8, '2021-03-15', 1),
+    (9, '2020-06-10', 2),
+    (10, '2022-05-01', 3),
+    (11, '2019-11-20', 4),
+    (12, '2023-01-05', 5),
+    (13, '2022-09-12', 6),
+    (14, '2021-07-18', 7),
+    (15, '2020-04-22', 8),
+    (16, '2023-03-10', 9),
+    (17, '2022-12-01', 10);
 
 -- Table Competiteur (Les compétiteurs sont répartis dans différents concours)
 INSERT INTO Competiteur (numCompetiteur, datePremiereParticipation)
