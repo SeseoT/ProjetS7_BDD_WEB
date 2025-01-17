@@ -40,8 +40,13 @@ VALUES
 -- Table President (Un président pour chaque concours)
 INSERT INTO President (numPresident, prime)
 VALUES
-(1, 5000.00),
-(2, 5500.00);
+(1, 3200.00),
+(2, 3000.00);
+(3, 1500.00),
+(4, 5500.00);
+(5, 2000.00),
+(6, 3000.00);
+
 
 -- Table Administrateur
 INSERT INTO Administrateur (numAdministrateur, dateDebut)
@@ -68,12 +73,21 @@ VALUES
 -- Table Concours (Assurer qu'il y a 6 concours en tout, un pour chaque saison et chaque concours doit avoir 6 clubs)
 INSERT INTO Concours (numConcours, theme, dateDebut, dateFin, etat, numPresident)
 VALUES
-(1, 'Paysages Naturels', '2024-01-10', '2024-01-20', 'Ouvert', 1),
-(2, 'Art Abstrait', '2024-03-01', '2024-03-10', 'Préparation', 2),
-(3, 'Peintures Classiques', '2024-05-15', '2024-05-25', 'Ouvert', 1),
-(4, 'Sculptures Modernes', '2024-07-01', '2024-07-10', 'Préparation', 2),
-(5, 'Arts Contemporains', '2024-09-05', '2024-09-15', 'Ouvert', 1),
-(6, 'Art en Nature', '2024-11-10', '2024-11-20', 'Préparation', 2);
+(1, 'Paysages Naturels', '2023-04-15', '2023-04-25', 'Evalue', 1),
+(2, 'Art Abstrait', '2023-07-18', '2023-07-28', 'Evalue', 2),
+(3, 'Peintures Classiques', '2023-09-05', '2023-09-15', 'Evalue', 3),
+(4, 'Sculptures Modernes', '2023-12-17', '2023-12-27', 'Evalue', 4),
+(5, 'Arts Contemporains', '2024-04-10', '2024-04-20', 'Evalue', 2),
+(6, 'Art en Nature', '2024-07-15', '2024-07-25', 'Evalue', 5),
+(7, 'Photographies Urbaines', '2024-09-20', '2024-09-30', 'Evalue', 6),
+(8, 'Graffiti et Street Art', '2024-12-15', '2024-12-25', 'En attente des resulats', 3),
+(9, 'Peintures Impressionnistes', '2025-01-10', '2025-01-20', 'En cours', 4),
+(10, 'Design Minimaliste', '2025-04-05', '2025-04-15', 'Non commence', 3),
+(11, 'Architecture Futuriste', '2025-08-15', '2025-08-25', 'Non commence', 6),
+(12, 'Céramiques Artisanales', '2025-10-20', '2025-10-30', 'Non commence', 1);
+
+
+
 
 -- Table Dessin (Un compétiteur     peut déposer jusqu'à 3 dessins par concours)
 INSERT INTO Dessin (numDessin, commentaire, classement, dateRemise, leDessin, numConcours, numCompetiteur)
