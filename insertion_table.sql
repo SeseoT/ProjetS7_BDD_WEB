@@ -217,14 +217,14 @@ VALUES
 -- Table Competiteur (Les compétiteurs sont répartis dans différents concours)
 INSERT INTO Competiteur (numCompetiteur, datePremiereParticipation)
 VALUES
-    (1, '2020-06-15'),
-    (2, '2021-07-10'),
-    (3, '2022-08-12'),
-    (4, '2022-11-14'),
-    (5, '2023-02-18'),
-    (6, '2023-04-21'),
-    (7, '2023-05-30'),
-    (8, '2023-07-09');
+(1, '2020-06-15'),
+(2, '2021-07-10'),
+(3, '2022-08-12'),
+(4, '2022-11-14'),
+(5, '2023-02-18'),
+(6, '2023-04-21'),
+(7, '2023-05-30'),
+(8, '2023-07-09');
 
 -- Table Concours (Assurer qu'il y a 6 concours en tout, un pour chaque saison et chaque concours doit avoir 6 clubs)
 INSERT INTO Concours (numConcours, theme, dateDebut, dateFin, etat, descriptif, numPresident)
@@ -324,7 +324,7 @@ VALUES
 (2, 8),
 (4, 8),
 (5, 8),
-(6, 8);
+(6, 8),
 (8, 8),
 (10, 8),
 (1, 9),
