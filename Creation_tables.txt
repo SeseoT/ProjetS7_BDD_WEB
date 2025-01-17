@@ -71,6 +71,7 @@ CREATE TABLE Concours (
     dateDebut DATE NOT NULL,
     dateFin DATE NOT NULL,
     etat VARCHAR(50),
+    descriptif VARCHAR(1000),
     numPresident INT NOT NULL,
     FOREIGN KEY (numPresident) REFERENCES President(numPresident) ON DELETE CASCADE,
     CHECK (DATEDIFF(dateFin, dateDebut) >= 1) /*-- Verifie que la date de fin est apres la date de debut*/
