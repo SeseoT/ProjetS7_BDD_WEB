@@ -36,6 +36,30 @@ VALUES
 (6, 'Fournier', 'Sophie', '5 Avenue des Arts, Bordeaux', 'sfournier', 'pass222', 4),
 (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'plemoine', 'pass333', 5),
 (8, 'Benoit', 'Thomas', '2 Avenue de l\'Art, Nîmes', 'tbenoit', 'pass444', 6);
+(9, ''Morel'', ''Alice'', ''12 Rue du Design, Lille'', ''amorel'', ''pass555'', 7),
+(10, ''Roux'', ''Antoine'', ''18 Rue des Sculpteurs, Lyon'', ''aroux'', ''pass666'', 5),
+(11, ''Petit'', ''Elodie'', ''25 Rue de l\''Impression, Paris'', ''epetit'', ''pass777'', 8),
+(12, ''Garcia'', ''Hugo'', ''30 Avenue du Futur, Bordeaux'', ''hgarcia'', ''pass888'', 7),
+(13, ''Bernard'', ''Nina'', ''22 Rue des Arts, Marseille'', ''nbernard'', ''pass999'', 7),
+(14, ''Girard'', ''Paul'', ''15 Boulevard du Minimalisme, Lyon'', ''pgirard'', ''pass101'', 9),
+(15, ''Andre'', ''Chloe'', ''5 Place de la Lumière, Nîmes'', ''candre'', ''pass202'', 10),
+(16, ''Lopez'', ''Maxime'', ''9 Rue des Fresques, Paris'', ''mlopez'', ''pass303'', 9),
+(17, ''Fernandez'', ''Juliette'', ''20 Avenue du Dessin, Toulouse'', ''jfernandez'', ''pass404'', 1),
+(18, ''Mercier'', ''Alexandre'', ''10 Rue du Graffiti, Marseille'', ''amercier'', ''pass505'', 8),
+(19, ''Lambert'', ''Lucie'', ''8 Avenue des Couleurs, Lille'', ''llambert'', ''pass606'', 2),
+(20, ''Bonnet'', ''Victor'', ''6 Rue du Futurisme, Paris'', ''vbonnet'', ''pass707'', 3),
+(21, ''Dupuis'', ''Sarah'', ''4 Boulevard de l\''Art Moderne, Lyon'', ''sdupuis'', ''pass808'', 4),
+(22, ''Schmitt'', ''Quentin'', ''3 Rue des Lumières, Bordeaux'', ''qschmitt'', ''pass909'', 4),
+(23, ''Colin'', ''Amelie'', ''7 Avenue des Paysages, Toulouse'', ''acolin'', ''pass010'', 3),
+(24, ''Barbier'', ''Leo'', ''2 Rue des Céramiques, Nîmes'', ''lbarbier'', ''pass111'', 10),
+(25, ''Gauthier'', ''Marie'', ''11 Rue de la Sculpture, Lille'', ''mgauthier'', ''pass222'', 6),
+(26, ''Chevalier'', ''Louis'', ''16 Avenue des Abstraits, Marseille'', ''lchevalier'', ''pass333'', 6),
+(27, ''Moulin'', ''Manon'', ''19 Boulevard des Arts, Paris'', ''mmoulin'', ''pass444'', 1),
+(28, ''Perez'', ''Hugo'', ''14 Rue du Tableau Vivant, Lyon'', ''hperez'', ''pass555'', 9),
+(29, ''Rey'', ''Emma'', ''1 Rue de la Lumière, Toulouse'', ''erey'', ''pass666'', 3),
+(30, ''Legrand'', ''Julie'', ''20 Avenue des Impressionnistes, Lille'', ''jlegrand'', ''pass777'', 4),
+(31, ''Vidal'', ''Mathieu'', ''17 Rue du Design Urbain, Nîmes'', ''mvidal'', ''pass888'', 5),
+(32, ''Roy'', ''Camille'', ''13 Boulevard des Fresques, Bordeaux'', ''croy'', ''pass999'', 6);
 
 -- Table President (Un président pour chaque concours)
 INSERT INTO President (numPresident, prime)
@@ -51,12 +75,17 @@ VALUES
 -- Table Administrateur
 INSERT INTO Administrateur (numAdministrateur, dateDebut)
 VALUES
-(2, '2023-01-01');
+(7, '2023-01-01');
 
 -- Table Directeur
 INSERT INTO Directeur (numDirecteur, dateDebut, numClub)
 VALUES
-(3, '2022-05-01', 1);
+(8, '2022-05-01', 1);
+(9, '2022-05-01', 2);
+(10, '2022-05-01', 3);
+(11, '2022-05-01', 4);
+(12, '2022-05-01', 5);
+(13, '2022-05-01', 6);
 
 -- Table Competiteur (Les compétiteurs sont répartis dans différents concours)
 INSERT INTO Competiteur (numCompetiteur, datePremiereParticipation)
