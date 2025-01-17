@@ -41,9 +41,9 @@ VALUES
 INSERT INTO President (numPresident, prime)
 VALUES
 (1, 3200.00),
-(2, 3000.00);
+(2, 3000.00),
 (3, 1500.00),
-(4, 5500.00);
+(4, 5500.00),
 (5, 2000.00),
 (6, 3000.00);
 
@@ -71,20 +71,21 @@ VALUES
 (8, '2023-07-09');
 
 -- Table Concours (Assurer qu'il y a 6 concours en tout, un pour chaque saison et chaque concours doit avoir 6 clubs)
-INSERT INTO Concours (numConcours, theme, dateDebut, dateFin, etat, numPresident)
+INSERT INTO Concours (numConcours, theme, dateDebut, dateFin, etat, descriptif, numPresident)
 VALUES
-(1, 'Paysages Naturels', '2023-04-15', '2023-04-25', 'Evalue', 1),
-(2, 'Art Abstrait', '2023-07-18', '2023-07-28', 'Evalue', 2),
-(3, 'Peintures Classiques', '2023-09-05', '2023-09-15', 'Evalue', 3),
-(4, 'Sculptures Modernes', '2023-12-17', '2023-12-27', 'Evalue', 4),
-(5, 'Arts Contemporains', '2024-04-10', '2024-04-20', 'Evalue', 2),
-(6, 'Art en Nature', '2024-07-15', '2024-07-25', 'Evalue', 5),
-(7, 'Photographies Urbaines', '2024-09-20', '2024-09-30', 'Evalue', 6),
-(8, 'Graffiti et Street Art', '2024-12-15', '2024-12-25', 'En attente des resulats', 3),
-(9, 'Peintures Impressionnistes', '2025-01-10', '2025-01-20', 'En cours', 4),
-(10, 'Design Minimaliste', '2025-04-05', '2025-04-15', 'Non commence', 3),
-(11, 'Architecture Futuriste', '2025-08-15', '2025-08-25', 'Non commence', 6),
-(12, 'Céramiques Artisanales', '2025-10-20', '2025-10-30', 'Non commence', 1);
+(1, 'Paysages Naturels', '2023-04-15', '2023-04-25', 'Evalue', 'Un concours mettant en avant des représentations artistiques de paysages naturels à travers différents médiums.', 1),
+(2, 'Art Abstrait', '2023-07-18', '2023-07-28', 'Evalue', 'Exploration des formes et couleurs abstraites, offrant une liberté totale à l\'imagination des artistes.', 2),
+(3, 'Peintures Classiques', '2023-09-05', '2023-09-15', 'Evalue', 'Un hommage aux techniques et styles traditionnels de la peinture classique.', 3),
+(4, 'Sculptures Modernes', '2023-12-17', '2023-12-27', 'Evalue', 'Une compétition mettant en lumière des œuvres sculpturales innovantes et modernes.', 4),
+(5, 'Arts Contemporains', '2024-04-10', '2024-04-20', 'Evalue', 'Un concours dédié aux créations contemporaines qui reflètent notre époque actuelle.', 2),
+(6, 'Art en Nature', '2024-07-15', '2024-07-25', 'Evalue', 'Des œuvres artistiques réalisées en harmonie avec la nature ou à partir d\'éléments naturels.', 5),
+(7, 'Photographies Urbaines', '2024-09-20', '2024-09-30', 'Evalue', 'Mise en valeur de la vie urbaine et des paysages citadins à travers la photographie.', 6),
+(8, 'Graffiti et Street Art', '2024-12-15', '2024-12-25', 'En attente des résultats', 'Un concours célébrant l\'art de la rue et la créativité des graffeurs.', 3),
+(9, 'Peintures Impressionnistes', '2025-01-10', '2025-01-20', 'En cours', 'Une invitation à reproduire la magie de la lumière et des couleurs propres à l\'impressionnisme.', 4),
+(10, 'Design Minimaliste', '2025-04-05', '2025-04-15', 'Non commence', 'Exploration du design épuré et fonctionnel, centré sur la simplicité et l\'essentiel.', 3),
+(11, 'Architecture Futuriste', '2025-08-15', '2025-08-25', 'Non commence', 'Un concours de conceptions architecturales visionnaires tournées vers l\'avenir.', 6),
+(12, 'Céramiques Artisanales', '2025-10-20', '2025-10-30', 'Non commence', 'Un concours mettant en avant le savoir-faire artisanal et les créations en céramique.', 1);
+
 
 
 
