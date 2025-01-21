@@ -18,7 +18,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         // Vérifier si un utilisateur correspondant existe
         if ($stmt->rowCount() > 0) {
             $_SESSION['username'] = $username; // Stocker le nom d'utilisateur dans la session
-            header("Location: dashboard.php"); // Rediriger vers le tableau de bord
+            header("Location: index.php"); // Rediriger vers le tableau de bord
             exit();
         } else {
             echo "Nom d'utilisateur ou mot de passe incorrect.";
