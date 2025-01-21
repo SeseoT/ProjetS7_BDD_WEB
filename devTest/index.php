@@ -11,11 +11,7 @@ if (!isset($_SESSION['username'])) {
     $stmt = $pdo->prepare($query);
     $stmt->bindParam(':id_user', $_SESSION['id_user']);
     $stmt->execute();
-    if($stmt->rowCount() > 0){
-        $_SESSION['role'] = "Admin";
-        header("Location: indexAdmin.php"); // Rediriger vers le tableau de bord
-        exit();
-    }
+
 }
 
 ?>
