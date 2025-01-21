@@ -1,8 +1,9 @@
 Objectifs interface WEB :
 
-1 - Une interface WEB permettant la connexion/déconnexion d’au moins un administrateur et un autre type d’utilisateur.
-2 - Toutes les requêtes imposées ou proposées doivent être dynamiquement exécutées à partir d’une interface Web et le résultat visualisé.
-3 - Des insertions via l’interface dans au moins 2 tables différentes (concours, utilisateur,)
-4 - Toute fonctionnalité supplémentaire serait une plus-value
+1 -POK- Une interface WEB permettant la connexion/déconnexion d’au moins un administrateur et un autre type d’utilisateur.
+2 -NOK- Toutes les requêtes imposées ou proposées doivent être dynamiquement exécutées à partir d’une interface Web et le résultat visualisé.
+2 - Création des vus indexUser/IndexAdmin/
+3 -NOK- Des insertions via l’interface dans au moins 2 tables différentes (concours, utilisateur,)
+4 -NOK- Toute fonctionnalité supplémentaire serait une plus-value
 
 Objectifs livrables Word :

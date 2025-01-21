@@ -14,10 +14,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $stmt->bindParam(':username', $username);
         $stmt->bindParam(':password', $password);
         $stmt->execute();
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
 
         // Vérifier si un utilisateur correspondant existe
         if ($stmt->rowCount() > 0) {
             $_SESSION['username'] = $username; // Stocker le nom d'utilisateur dans la session
+            $_SESSION['id_user'] =  $result['numUtilisateur'];
             header("Location: index.php"); // Rediriger vers le tableau de bord
             exit();
         } else {
