@@ -32,7 +32,6 @@ VALUES
 -- Table Utilisateur
 INSERT INTO Utilisateur (numUtilisateur, nom, prenom, adresse, login, motDePasse, numClub)
 VALUES
-   --presidents
     (1, 'Martin', 'Claire', '5 Rue des Dessins, Lyon', 'cmartin', 'pass123', 1),
     (2, 'Dupont', 'Luc', '8 Avenue de l"Art, Paris', 'ldupont', 'pass456', 2),
     (3, 'Durand', 'Emma', '3 Boulevard des Peintres, Lyon', 'edurand', 'pass789', 1),
