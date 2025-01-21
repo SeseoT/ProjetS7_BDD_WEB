@@ -22,15 +22,27 @@ if (!isset($_SESSION['username'])) {
     <p>Admin vous êtes connecté avec succès.</p>
     <a href="logout.php">Se déconnecter</a>
 </div>
-<button id="fetchData">Requete 1</button>
-<div id="dataTable"></div>
+<button id="fetchDataR1">Requete 1</button>
+<div id="dataTableR1"></div>
+<button id="fetchDataR2">Requete 2</button>
+<div id="dataTableR2"></div>
 <script>
-    document.getElementById('fetchData').addEventListener('click', () => {
+    document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
             .then(response => {
                 return response.text()})
             .then(data => {
-                document.getElementById('dataTable').innerHTML = data;
+                document.getElementById('dataTableR1').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    });
+
+    document.getElementById('fetchDataR2').addEventListener('click', () => {
+        fetch('requete2.php')
+            .then(response => {
+                return response.text()})
+            .then(data => {
+                document.getElementById('dataTableR2').innerHTML = data;
             })
             .catch(error => console.error('Erreur:', error));
     });
