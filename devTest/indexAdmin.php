@@ -22,5 +22,17 @@ if (!isset($_SESSION['username'])) {
     <p>Admin vous êtes connecté avec succès.</p>
     <a href="logout.php">Se déconnecter</a>
 </div>
+<button id="fetchData">Requete 1</button>
+<div id="dataTable"></div>
+<script>
+    document.getElementById('fetchData').addEventListener('click', () => {
+        fetch('requete1.php')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('dataTable').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    });
+</script>
 </body>
 </html>
