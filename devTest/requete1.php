@@ -17,7 +17,6 @@ if (!isset($_SESSION['username'])) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
     // Construire le tableau HTML
-    print_r($result);
     $html = '<table border="1">';
     $html .= '<tr>
                 <th>Prénom</th>
