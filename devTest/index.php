@@ -8,8 +8,8 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
     try {
-        $query = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
-        $stmt = $pdo->prepare($query);
+        $sql = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
+        $stmt = $connexion->prepare($sql);
         $stmt->bindParam(':id_user', $_SESSION['id_user']);
         $stmt->execute();
     }
