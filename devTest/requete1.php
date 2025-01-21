@@ -28,7 +28,7 @@ if (!isset($_SESSION['username'])) {
                 <th>Date de Début</th>
                 <th>Date de Fin</th>
               </tr>';
-    $html .= '<p>' . htmlspecialchars($result) . '</p>';
+    $html .= '<p>' . htmlspecialchars($result[0]) . '</p>';
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>';
                    foreach ($row as $attribut) {
