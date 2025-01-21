@@ -31,13 +31,6 @@ if (!isset($_SESSION['username'])) {
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>
                     <td>LOL</td>
-                    <td>' . htmlspecialchars($row['nom']) . '</td>
-                    <td>' . htmlspecialchars($row['adresse']) . '</td>
-                    <td>' . htmlspecialchars($row['nomClub']) . '</td>
-                    <td>' . htmlspecialchars($row['departement']) . '</td>
-                    <td>' . htmlspecialchars($row['region']) . '</td>
-                    <td>' . htmlspecialchars($row['dateDebut']) . '</td>
-                    <td>' . htmlspecialchars($row['dateFin']) . '</td>
                   </tr>';
     }
     $html .= '</table>';
