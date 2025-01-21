@@ -31,6 +31,7 @@ CREATE TABLE Utilisateur (
     numUtilisateur INT PRIMARY KEY,
     nom VARCHAR(100) NOT NULL,
     prenom VARCHAR(100) NOT NULL,
+    age INT NOT NULL,
     adresse VARCHAR(255) NOT NULL,
     login VARCHAR(50) UNIQUE NOT NULL,
     motDePasse VARCHAR(255) NOT NULL,

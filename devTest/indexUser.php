@@ -1,6 +1,7 @@
 <?php
 session_start();
 require("connect.php"); // Inclure la configuration de connexion
+
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
@@ -33,20 +34,44 @@ if (!isset($_SESSION['username'])) {
 }
 ?>
 
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Utilisateur</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Script JS -->
+    <script src="script.js"></script>
 </head>
+
 <body>
-<div class="container">
-    <h1>Bienvenue, <?= htmlspecialchars($prenom); ?> <?= htmlspecialchars($nom); ?> !</h1>
-    <p>Vous êtes connecté avec succès.</p>
+
+<!-- Header -->
+<!-- Menu de navigation -->
+<div class="menu">
+    <a href="index.php">Accueil</a>
+    <a href="concoursUser.php">Mes Concours</a>
+    <a href="profile.php">Mon Profil</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
+
+<div class="header">
+    <h1>Bienvenue sur votre espace personnel</h1>
+</div>
+
+<!-- Contenu principal -->
+<div class="container">
+    <h2>Vos informations personnelles : </h2>
+    <div class="user-info">
+        <p><span class="user-data">Prénom :</span> <?= htmlspecialchars($prenom); ?></p>
+        <p><span class="user-data">Nom :</span> <?= htmlspecialchars($nom); ?></p>
+        <p><span class="user-data">Adresse :</span> <?= htmlspecialchars($adresse); ?></p>
+        <p><span class="user-data">Club :</span> <?= htmlspecialchars($nomClub); ?></p>
+    </div>
+</div>
+
 </body>
+
 </html>
