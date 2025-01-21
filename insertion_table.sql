@@ -32,21 +32,15 @@ VALUES
 -- Table Utilisateur
 INSERT INTO Utilisateur (numUtilisateur, nom, prenom, adresse, login, motDePasse, numClub)
 VALUES
-   --presidents
     (1, 'Martin', 'Claire', '5 Rue des Dessins, Lyon', 'cmartin', 'pass123', 1),
     (2, 'Dupont', 'Luc', '8 Avenue de l"Art, Paris', 'ldupont', 'pass456', 2),
     (3, 'Durand', 'Emma', '3 Boulevard des Peintres, Lyon', 'edurand', 'pass789', 1),
     (4, 'Leclerc', 'Julien', '10 Rue des Artistes, Paris', 'jleclerc', 'pass000', 2),
     (5, 'Dubois', 'Marc', '1 Rue du Tableau, Marseille', 'mdubois', 'pass111', 3),
     (6, 'Fournier', 'Sophie', '5 Avenue des Arts, Bordeaux', 'sfournier', 'pass222', 4),
+
     (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'admin', 'admin', 5),
-    (3, 'Durand', 'Emma', '3 Boulevard des Peintres, Lyon', 'edurand', 'pass789', 3),
-    (4, 'Leclerc', 'Julien', '10 Rue des Artistes, Paris', 'jleclerc', 'pass000', 4),
-    (5, 'Dubois', 'Marc', '1 Rue du Tableau, Marseille', 'mdubois', 'pass111', 5),
-    (6, 'Fournier', 'Sophie', '5 Avenue des Arts, Bordeaux', 'sfournier', 'pass222', 6),
-    --admin
-    (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'plemoine', 'pass333', 0),
-    --directeurs
+
     (8, 'Benoit', 'Thomas', '2 Avenue de l"Art, Nîmes', 'tbenoit', 'pass444', 6),
     (9, 'Morel', 'Alice', '12 Rue du Design, Lille', 'amorel', 'pass555', 7),
     (10, 'Roux', 'Antoine', '18 Rue des Sculpteurs, Lyon', 'aroux', 'pass666', 5),
@@ -57,7 +51,7 @@ VALUES
     (15, 'Andre', 'Chloe', '5 Place de la Lumière, Nîmes', 'candre', 'pass202', 10),
     (16, 'Lopez', 'Maxime', '9 Rue des Fresques, Paris', 'mlopez', 'pass303', 9),
     (17, 'Fernandez', 'Juliette', '20 Avenue du Dessin, Toulouse', 'jfernandez', 'pass404', 1),
-    --evaluateurs
+
     (18, 'Mercier', 'Alexandre', '10 Rue du Graffiti, Marseille', 'amercier', 'pass505', 1),
     (19, 'Lambert', 'Lucie', '8 Avenue des Couleurs, Lille', 'llambert', 'pass606', 1),
     (20, 'Bonnet', 'Victor', '6 Rue du Futurisme, Paris', 'vbonnet', 'pass707', 1),
@@ -88,8 +82,7 @@ VALUES
     (45, 'Olivier', 'Paul', '5 Place de l"Abstraction, Toulouse', 'polivier', 'pass222', 10),
     (46, 'Rossi', 'Chloe', '9 Boulevard de la Lumière, Marseille', 'crossi', 'pass333', 10),
     (47, 'Baron', 'Leo', '14 Rue des Arts Modernes, Paris', 'lbaron', 'pass444', 10),
-    --competiteur
-    --club 1
+
     (48, 'Paris', 'Emma', '19 Avenue des Designs, Lille', 'eparis', 'pass555', 1),
     (49, 'Rolland', 'Camille', '21 Boulevard des Peintures, Bordeaux', 'crolland', 'pass666', 1),
     (50, 'Renault', 'Antoine', '4 Rue des Sculptures Urbaines, Lyon', 'arenault', 'pass777', 1),
@@ -100,7 +93,7 @@ VALUES
     (55, 'Poulain', 'Manon', '5 Place des Lumières, Bordeaux', 'mpoulain', 'pass222', 1),
     (56, 'Lemoine', 'Theo', '7 Rue du Design Futuriste, Marseille', 'tlemoine', 'pass333', 1),
     (57, 'Levesque', 'Nina', '3 Avenue des Graffitis, Lille', 'nlevesque', 'pass444', 1),
-  --club 2
+
     (58, 'Albert', 'Lucas', '22 Boulevard du Dessin Urbain, Toulouse', 'lalbert', 'pass555', 2),
     (59, 'Lemoal', 'Juliette', '20 Rue de l"Abstraction, Lyon', 'jlemoal', 'pass666', 2),
     (60, 'Clément', 'Victor', '17 Avenue des Paysages, Marseille', 'vclement', 'pass777', 2),
@@ -111,7 +104,7 @@ VALUES
     (65, 'Picard', 'Leo', '2 Boulevard des Arts Contemporains, Toulouse', 'lpicard', 'pass222', 2),
     (66, 'Renard', 'Chloe', '19 Rue des Céramiques Artisanales, Paris', 'crenard', 'pass333', 2),
     (67, 'Masson', 'Lucas', '3 Avenue des Graffitis Urbains, Lyon', 'lmasson', 'pass444', 2),
-    --club 3
+
     (68, 'Marchand', 'Alice', '7 Rue des Couleurs Naturelles, Bordeaux', 'amarchand', 'pass555', 3),
     (69, 'Gillet', 'Antoine', '20 Boulevard des Dessins Urbains, Marseille', 'agillet', 'pass666', 3),
     (70, 'Cheval', 'Juliette', '10 Rue des Impressionnistes, Lille', 'jcheval', 'pass777', 3),
@@ -122,7 +115,7 @@ VALUES
     (75, 'Laurent', 'Elodie', '19 Rue du Tableau, Toulouse', 'elaurent', 'pass606', 3),
     (76, 'Deschamps', 'Sophie', '23 Avenue de l"Art Nouveau, Paris', 'sdeschamps', 'pass707', 3),
     (77, 'Beaumont', 'Nicolas', '31 Rue des Ateliers, Lyon', 'nbeaumont', 'pass808', 3),
-    --club 4
+
     (78, 'Delaunay', 'Charlotte', '27 Boulevard des Créateurs, Marseille', 'cdelaunay', 'pass909', 4),
     (79, 'Fontaine', 'Gabriel', '14 Place de l"Innovation, Bordeaux', 'gfontaine', 'pass121', 4),
     (80, 'Bouvier', 'Léa', '8 Rue de l"Expression, Toulouse', 'lbouvier', 'pass131', 4),
@@ -133,7 +126,7 @@ VALUES
     (85, 'Vasseur', 'Nathan', '25 Rue des Esquisses, Rennes', 'nvasseur', 'pass181', 4),
     (86, 'Lemaire', 'Eva', '33 Boulevard de l"Art Digital, Nice', 'elemaire', 'pass191', 4),
     (87, 'Boulay', 'Maxence', '18 Rue des Compositions, Reims', 'mboulay', 'pass201', 4),
-    --club 5
+
     (88, 'Peltier', 'Jade', '20 Avenue des Perspectives, Grenoble', 'jpeltier', 'pass211', 5),
     (89, 'Bourgeois', 'Simon', '12 Rue des Installations, Dijon', 'sbourgeois', 'pass221', 5),
     (90, 'Jacquet', 'Maëlle', '28 Boulevard des Performances, Angers', 'mjacquet', 'pass231', 5),
@@ -144,7 +137,7 @@ VALUES
     (95, 'Bertin', 'Oscar', '32 Rue de l"Art Contemporain, Nice', 'obertin', 'pass281', 5),
     (96, 'Seguin', 'Romane', '26 Avenue des Galeries, Reims', 'rseguin', 'pass291', 5),
     (97, 'Marty', 'Bastien', '17 Rue des Vernissages, Grenoble', 'bmarty', 'pass301', 5),
-    --club 6
+
     (98, 'Leroy', 'Margaux', '13 Place des Expositions, Dijon', 'mleroy', 'pass311', 6),
     (99, 'Aubert', 'Théo', '8 Boulevard des Ateliers, Angers', 'taubert', 'pass321', 6),
     (100, 'Pelletier', 'Zoé', '19 Rue des Créateurs, Le Mans', 'zpelletier', 'pass331', 6),
@@ -155,7 +148,7 @@ VALUES
     (105, 'Lebrun', 'Valentin', '12 Rue des Studios, Perpignan', 'vlebrun', 'pass381', 6),
     (106, 'Duval', 'Carla', '25 Avenue des Arts Plastiques, Mulhouse', 'cduval', 'pass391', 6),
     (107, 'Salmon', 'Nolan', '30 Boulevard des Expositions, Brest', 'nsalmon', 'pass401', 6),
-    --club 7
+
     (108, 'Tessier', 'Océane', '14 Rue de l"Art Urbain, Amiens', 'otessier', 'pass411', 7),
     (109, 'Perret', 'Dylan', '27 Avenue des Vernissages, Limoges', 'dperret', 'pass421', 7),
     (110, 'Michaud', 'Lilou', '22 Place des Créations, Bayonne', 'lmichaud', 'pass431', 7),
@@ -166,7 +159,7 @@ VALUES
     (115, 'Thibault', 'Axel', '20 Rue des Expositions, Pau', 'athibault', 'pass481', 7),
     (116, 'Reynaud', 'Lola', '24 Boulevard des Ateliers, Nancy', 'lreynaud', 'pass491', 7),
     (117, 'Cordier', 'Tom', '29 Avenue des Créateurs, Tours', 'tcordier', 'pass501', 7),
-    --club 8
+
     (118, 'Godin', 'Maeva', '13 Rue de l"Art Moderne, Clermont-Ferrand', 'mgodin', 'pass511', 8),
     (119, 'Coulon', 'Nino', '28 Place des Galeries, Versailles', 'ncoulon', 'pass521', 8),
     (120, 'Pascal', 'Lena', '16 Boulevard des Innovations, Cannes', 'lpascal', 'pass531', 8),
@@ -177,7 +170,7 @@ VALUES
     (125, 'Chevallier', 'Martin', '23 Rue de l"Art Contemporain, Béziers', 'mchevallier', 'pass581', 8),
     (126, 'Bouvet', 'Célia', '19 Avenue des Vernissages, Dunkerque', 'cbouvet', 'pass591', 8),
     (127, 'Imbert', 'Lorenzo', '14 Place des Innovations, Arles', 'limbert', 'pass601', 8),
-    --club 9
+
     (128, 'Marin', 'Jeanne', '30 Boulevard des Ateliers, Chartres', 'jmarin', 'pass611', 9),
     (129, 'Guichard', 'Kylian', '25 Rue des Performances, Niort', 'kguichard', 'pass621', 9),
     (130, 'Descamps', 'Camille', '11 Avenue des Studios, Chambéry', 'cdescamps', 'pass631', 9),
@@ -188,7 +181,7 @@ VALUES
     (135, 'Gregoire', 'Sacha', '15 Place des Innovations, Roanne', 'sgregoire', 'pass681', 9),
     (136, 'Bouchet', 'Louane', '20 Rue de l"Art Moderne, Blois', 'lbouchet', 'pass691', 9),
     (137, 'Sabatier', 'Noam', '24 Boulevard des Ateliers, Bastia', 'nsabatier', 'pass701', 9),
-    --club 10
+
     (138, 'Delmas', 'Clémence', '29 Avenue des Studios, Mérignac', 'cdelmas', 'pass711', 10),
     (139, 'Caron', 'Loan', '13 Place des Créations, Saint-Malo', 'lcaron', 'pass721', 10),
     (140, 'Buisson', 'Pauline', '28 Rue des Performances, Belfort', 'pbuisson', 'pass731', 10),
@@ -199,7 +192,7 @@ VALUES
     (145, 'Bazin', 'Tristan', '17 Boulevard des Ateliers, Carcassonne', 'tbazin', 'pass781', 10),
     (146, 'Lacombe', 'Apolline', '23 Avenue des Studios, Chalon', 'alacombe', 'pass791', 10),
     (147, 'Allard', 'César', '19 Place de l"Art Contemporain, Vienne', 'callard', 'pass801', 10),
---rab
+
     (148, 'Forestier', 'Lise', '14 Rue des Créations, Laval', 'lforestier', 'pass811', 3),
     (149, 'Perrier', 'Rémi', '30 Boulevard des Performances, Meaux', 'rperrier', 'pass821', 4),
     (150, 'Dufour', 'Félicie', '25 Avenue des Innovations, Quimper', 'fdufour', 'pass831', 5);
@@ -207,42 +200,40 @@ VALUES
 -- Table President (Un président pour chaque concours)
 INSERT INTO President (numPresident, prime)
 VALUES
-(1, 3200.00),
-(2, 3000.00),
-(3, 1500.00),
-(4, 5500.00),
-(5, 2000.00),
-(6, 3000.00);
+    (1, 3200.00),
+    (2, 3000.00),
+    (3, 1500.00),
+    (4, 5500.00),
+    (5, 2000.00),
+    (6, 3000.00);
 
 
 -- Table Administrateur
 INSERT INTO Administrateur (numAdministrateur, dateDebut)
 VALUES
-(7, '2023-01-01');
+(7, '2020-01-01');
 
 -- Table Directeur
 INSERT INTO Directeur (numDirecteur, dateDebut, numClub)
 VALUES
-(8, '2022-05-01', 1),
-(9, '2022-05-01', 2),
-(10, '2022-05-01', 3),
-(11, '2022-05-01', 4),
-(12, '2022-05-01', 5),
-(13, '2022-05-01', 6),
-(14, '2022-05-01', 7),
-(15, '2022-05-01', 8),
-(16, '2022-05-01', 9),
-(17, '2022-05-01', 10);
-
+    (8, '2021-03-15', 1),
+    (9, '2020-06-10', 2),
+    (10, '2022-05-01', 3),
+    (11, '2019-11-20', 4),
+    (12, '2023-01-05', 5),
+    (13, '2022-09-12', 6),
+    (14, '2021-07-18', 7),
+    (15, '2020-04-22', 8),
+    (16, '2023-03-10', 9),
+    (17, '2022-12-01', 10);
 
 -- Table Competiteur (Les compétiteurs sont répartis dans différents concours)
 INSERT INTO Competiteur (numCompetiteur, datePremiereParticipation)
 VALUES
     (18, '2025-01-10'),
-    (21, '2025-04-05'),
-    (24, '2025-08-15'),
-    (8, '2025-10-20'),
-    (9, '2023-04-15'),
+    (21, '2025-01-10'),
+    (24, '2025-01-10'),
+
     (48, '2025-01-10'),
     (49, '2025-04-05'),
     (50, '2025-08-15'),
@@ -335,7 +326,7 @@ VALUES
     (137, '2023-07-18'),
     (138, '2023-09-05'),
     (139, '2023-12-17'),
-    (140, '2024-04-10');
+    (140, '2024-04-10'),
     (141, '2025-04-05'),
     (142, '2025-08-15'),
     (143, '2025-10-20'),
@@ -373,45 +364,44 @@ VALUES
 -- Table Evaluateur (Assurer qu'il y a 3 évaluateurs par concours)
 INSERT INTO Evaluateur (numEvaluateur, specialite)
 VALUES
-(18, 'Paysages'), --club 1
+(18, 'Paysages'),
 (19, 'Abstrait'),
-(20, 'Contemporain');
-(21, 'Paysages'), --club 2
+(20, 'Contemporain'),
+(21, 'Paysages'),
 (22, 'Abstrait'),
-(23, 'Contemporain');
-(24, 'Paysages'), --club 3
+(23, 'Contemporain'),
+(24, 'Paysages'),
 (25, 'Abstrait'),
-(26, 'Contemporain');
-(27, 'Paysages'), --club 4
+(26, 'Contemporain'),
+(27, 'Paysages'),
 (28, 'Abstrait'),
-(29, 'Contemporain');
-(30, 'Paysages'), --club 5
+(29, 'Contemporain'),
+(30, 'Paysages'),
 (31, 'Abstrait'),
-(32, 'Contemporain');
-(33, 'Paysages'), --club 6
+(32, 'Contemporain'),
+(33, 'Paysages'),
 (34, 'Abstrait'),
-(35, 'Contemporain');
-(36, 'Paysages'), --club 7
+(35, 'Contemporain'),
+(36, 'Paysages'),
 (37, 'Abstrait'),
-(38, 'Contemporain');
-(39, 'Paysages'), --club 8
+(38, 'Contemporain'),
+(39, 'Paysages'),
 (40, 'Abstrait'),
-(41, 'Contemporain');
-(42, 'Paysages'), --club 9
+(41, 'Contemporain'),
+(42, 'Paysages'),
 (43, 'Abstrait'),
-(44, 'Contemporain');
-(45, 'Paysages'), --club 10
+(44, 'Contemporain'),
+(45, 'Paysages'),
 (46, 'Abstrait'),
 (47, 'Contemporain');
-
 
 -- Table Evaluation (Deux évaluateurs pour chaque dessin)
 INSERT INTO Evaluation (dateEvaluation, note, commentaire, numDessin, numEvaluateur)
 VALUES
-    ('2024-01-15', 9.5, 'Excellent.', 1, 2),
-    ('2024-01-15', 8.0, 'Bien realise.', 1, 3),
-    ('2024-01-16', 8.5, 'Tres bon effort.', 2, 2),
-    ('2024-01-16', 9.0, 'Belle technique.', 2, 3);
+    ('2024-01-15', 9.5, 'Excellent.', 1, 18),
+    ('2024-01-15', 8.0, 'Bien realise.', 1, 19),
+    ('2024-01-16', 8.5, 'Tres bon effort.', 2, 20),
+    ('2024-01-16', 9.0, 'Belle technique.', 2, 21);
 
 -- Table ClubParticipe (Assurer qu'il y a au moins 6 clubs dans chaque concours)
 INSERT INTO ClubParticipe (numClub, numConcours)
@@ -502,84 +492,16 @@ VALUES
 -- Table CompetiteurParticipe (Un compétiteur peut participer à un concours)
 INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
 VALUES
-(1, 18),
-(1, 43),
-(1, 49),
-(1, 50),
-(1, 51),
-(1, 52),
-(1, 53),
-(2, 18),
-(2, 43),
-(2, 49),
-(2, 50),
-(2, 51),
-(2, 52),
-(2, 53),
+(1, 50);
 
 
-/*INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 1
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-  AND numUtilisateur NOT IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 2
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 2
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 3
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 3
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 4
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 4
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 6
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 6
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 7
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 7
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
-
--- Club 8
-INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-SELECT 1, numUtilisateur
-FROM Utilisateur
-WHERE numClub = 8
-  AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;*/
 
 
 -- Table EvaluateurJury (Un dessin doit être évalué par deux évaluateurs, un jury)
 INSERT INTO EvaluateurJury (numConcours, numEvaluateur)
 VALUES
-    (1, 2),
-    (1, 3),
-    (2, 2),
-    (2, 3);
+    (1, 18),
+    (1, 19),
+    (2, 20),
+    (2, 21);
 
