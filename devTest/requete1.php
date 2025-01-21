@@ -28,18 +28,6 @@ if (!isset($_SESSION['username'])) {
                 <th>Date de Début</th>
                 <th>Date de Fin</th>
               </tr>';
-    foreach ($result as $row) {
-        $html .= '<tr>
-                    <td>' . htmlspecialchars($row['prenom']) . '</td>
-                    <td>' . htmlspecialchars($row['nom']) . '</td>
-                    <td>' . htmlspecialchars($row['adresse']) . '</td>
-                    <td>' . htmlspecialchars($row['nomClub']) . '</td>
-                    <td>' . htmlspecialchars($row['departement']) . '</td>
-                    <td>' . htmlspecialchars($row['region']) . '</td>
-                    <td>' . htmlspecialchars($row['dateDebut']) . '</td>
-                    <td>' . htmlspecialchars($row['dateFin']) . '</td>
-                  </tr>';
-    }
     $html .= '</table>';
     // Envoyer le tableau
     echo $html;
