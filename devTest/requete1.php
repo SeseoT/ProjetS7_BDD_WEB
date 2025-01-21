@@ -29,9 +29,11 @@ if (!isset($_SESSION['username'])) {
                 <th>Date de Fin</th>
               </tr>';
     foreach ($result as $row) {//$row['prenom']
-        $html .= '<tr>
-                   <td>' . htmlspecialchars($row['Utilisateur.prenom']) . '</td>
-                  </tr>';
+        $html .= '<tr>';
+                   foreach ($row as $attribut) {
+                       $html .= '<td>' . htmlspecialchars($attribut) . '</td>';
+                   }
+        $html .= '</tr>';
     }
     $html .= '</table>';
     // Envoyer le tableau
