@@ -5,16 +5,6 @@ session_start();
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
-}else{//Redirection vers les pages spécialisé des clients
-  $query = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
-  $stmt = $pdo->prepare($query);
-  $stmt->bindParam(':id_user', $_SESSION['id_user']);
-  $stmt->execute();
-  if($stmt->rowCount() > 0){
-    $_SESSION['role'] = "Admin";
-    header("Location: indexAdmin.php"); // Rediriger vers le tableau de bord
-    exit();
-  }
 }
 
 ?>
