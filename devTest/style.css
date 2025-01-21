@@ -1,0 +1,101 @@
+/* Styles généraux */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* Conteneur principal */
+.container {
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Titres */
+h1, h2 {
+    text-align: center;
+    color: #0056b3;
+    margin-top: 10px;  /* Distance au-dessus */
+    margin-bottom: 10px; /* Distance en dessous */
+}
+
+/* Formulaires */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 0px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+button {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #0056b3;
+}
+
+button {
+    background-color: #0056b3;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #003d80;
+}
+
+/* Lien */
+a {
+    text-decoration: none;
+    color: #0056b3;
+    display: inline-block;
+    margin-top: 10px;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #003d80;
+}
+
+/* Messages */
+.success {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+}
+
+.error {
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+input[type="checkbox"] {
+    margin-right: 5px;
+}
+
+label[for="showPassword"] {
+    font-size: 14px;
+    color: #333;
+}
