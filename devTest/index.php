@@ -16,6 +16,13 @@ if (!isset($_SESSION['username'])) {
     catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
+    if($stmt->rowCount() > 0){
+        header("Location: indexAdmin.php"); // Rediriger vers le tableau de bord
+        exit();
+    }else{
+        header("Location: indexUser.php"); // Rediriger vers le tableau de bord
+        exit();
+    }
 }
 
 ?>
