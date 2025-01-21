@@ -6,7 +6,7 @@ require("connect.php"); // Inclure la configuration de connexion
 if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
-}else{//Redirection vers les pages spécialisé des clients
+} else {//Redirection vers les pages spécialisé des clients
     try {
         $sql = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
         $stmt = $connexion->prepare($sql);
@@ -24,6 +24,5 @@ if (!isset($_SESSION['username'])) {
         exit();
     }
 }
-
 ?>
 
