@@ -1,20 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connexion</title>
-</head>
-<body>
-<h1>Connexion à votre compte</h1>
-<form method="POST" action="process_login.php">
-    <label for="username">Nom d'utilisateur :</label><br>
-    <input type="text" id="username" name="username" required><br><br>
+<?php
+define('USER', "db_etu");           // Nom d'utilisateur de la base de données
+define('PASSWD', "N3twork!");        // Mot de passe de la base de données
+define('SERVER', "localhost");    // Hôte du serveur de base de données
+define('BASE', "ProjetDessins");        // Nom de la base de données
+//define('BASE', "db_site");        // Nom de la base de données
 
-    <label for="password">Mot de passe :</label><br>
-    <input type="password" id="password" name="password" required><br><br>
-
-    <button type="submit">Se connecter</button>
-</form>
-</body>
-</html>
+try {
+    // Connexion à la base de données
+    $dsn = "mysql:dbname=" . BASE . ";host=" . SERVER;
+    $connexion = new PDO($dsn, USER, PASSWD);
+    $connexion->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (PDOException $e) {
+    die("Échec de la connexion : " . $e->getMessage());
+}
+?>
