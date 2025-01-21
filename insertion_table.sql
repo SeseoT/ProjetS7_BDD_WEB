@@ -39,7 +39,7 @@ VALUES
     (5, 'Dubois', 'Marc', '1 Rue du Tableau, Marseille', 'mdubois', 'pass111', 3),
     (6, 'Fournier', 'Sophie', '5 Avenue des Arts, Bordeaux', 'sfournier', 'pass222', 4),
     (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'admin', 'admin', 5),
-    (8, 'Benoit', 'Thomas', '2 Avenue de l\'Art, Nîmes', 'tbenoit', 'pass444', 6),
+    (8, 'Benoit', 'Thomas', '2 Avenue de l"Art, Nîmes', 'tbenoit', 'pass444', 6),
     (9, 'Morel', 'Alice', '12 Rue du Design, Lille', 'amorel', 'pass555', 7),
     (10, 'Roux', 'Antoine', '18 Rue des Sculpteurs, Lyon', 'aroux', 'pass666', 5),
     (11, 'Petit', 'Elodie', '25 Rue de l"Impression, Paris', 'epetit', 'pass777', 8),
@@ -217,6 +217,11 @@ VALUES
 -- Table Competiteur (Les compétiteurs sont répartis dans différents concours)
 INSERT INTO Competiteur (numCompetiteur, datePremiereParticipation)
 VALUES
+    (18, '2025-01-10'),
+    (21, '2025-04-05'),
+    (24, '2025-08-15'),
+    (8, '2025-10-20'),
+    (9, '2023-04-15'),
     (48, '2025-01-10'),
     (49, '2025-04-05'),
     (50, '2025-08-15'),
@@ -310,6 +315,14 @@ VALUES
     (138, '2023-09-05'),
     (139, '2023-12-17'),
     (140, '2024-04-10');
+    (141, '2025-04-05'),
+    (142, '2025-08-15'),
+    (143, '2025-10-20'),
+    (144, '2023-04-15'),
+    (145, '2023-07-18'),
+    (146, '2023-09-05'),
+    (147, '2023-12-17');
+
 
 -- Table Concours (Assurer qu'il y a 6 concours en tout, un pour chaque saison et chaque concours doit avoir 6 clubs)
 INSERT INTO Concours (numConcours, theme, dateDebut, dateFin, etat, descriptif, numPresident)
@@ -469,16 +482,24 @@ VALUES
 (10, 12);
 
 -- Table CompetiteurParticipe (Un compétiteur peut participer à un concours)
-/*INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
-VALUES
-(1, 22),
-(1, 23),
-(1, 32),
-(1, 42),
-(1, 52),
-(1, 62);*/
-
 INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
+VALUES
+(1, 18),
+(1, 43),
+(1, 49),
+(1, 50),
+(1, 51),
+(1, 52),
+(1, 53),
+(2, 18),
+(2, 43),
+(2, 49),
+(2, 50),
+(2, 51),
+(2, 52),
+(2, 53),
+
+/*INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
 SELECT 1, numUtilisateur
 FROM Utilisateur
 WHERE numClub = 1
@@ -532,7 +553,7 @@ SELECT 1, numUtilisateur
 FROM Utilisateur
 WHERE numClub = 8
   AND numUtilisateur IN (SELECT numCompetiteur FROM Competiteur)
-    LIMIT 6;
+    LIMIT 6;*/
 
 
 -- Table EvaluateurJury (Un dessin doit être évalué par deux évaluateurs, un jury)
