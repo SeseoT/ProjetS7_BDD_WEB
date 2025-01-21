@@ -23,7 +23,7 @@ if (!isset($_SESSION['username'])) {
     <a href="logout.php">Se déconnecter</a>
 </div>
 <button id="fetchData">Requete 1</button>
-<div id="dataTable">jfeos</div>
+<div id="dataTable"></div>
 <script>
     document.getElementById('fetchData').addEventListener('click', () => {
         fetch('requete1.php')
