@@ -30,7 +30,7 @@ if (!isset($_SESSION['username'])) {
               </tr>';
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>
-                   <td>'$row['prenom'] '</td>
+                   <td>' . htmlspecialchars($result['prenom']) . '</td>
                   </tr>';
     }
     $html .= '</table>';
