@@ -27,7 +27,8 @@ if (!isset($_SESSION['username'])) {
 <script>
     document.getElementById('fetchData').addEventListener('click', () => {
         fetch('requete1.php')
-            .then(response => response.text())
+            .then(response => {
+                return response.text()})
             .then(data => {
                 document.getElementById('dataTable').innerHTML = data;
             })
