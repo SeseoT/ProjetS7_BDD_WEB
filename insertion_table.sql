@@ -38,7 +38,7 @@ VALUES
     (4, 'Leclerc', 'Julien', '10 Rue des Artistes, Paris', 'jleclerc', 'pass000', 2),
     (5, 'Dubois', 'Marc', '1 Rue du Tableau, Marseille', 'mdubois', 'pass111', 3),
     (6, 'Fournier', 'Sophie', '5 Avenue des Arts, Bordeaux', 'sfournier', 'pass222', 4),
-    (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'plemoine', 'pass333', 5),
+    (7, 'Lemoine', 'Pierre', '3 Rue des Peintres, Toulouse', 'admin', 'admin', 5),
     (8, 'Benoit', 'Thomas', '2 Avenue de l\'Art, Nîmes', 'tbenoit', 'pass444', 6),
     (9, 'Morel', 'Alice', '12 Rue du Design, Lille', 'amorel', 'pass555', 7),
     (10, 'Roux', 'Antoine', '18 Rue des Sculpteurs, Lyon', 'aroux', 'pass666', 5),
@@ -257,9 +257,37 @@ VALUES
 -- Table Evaluateur (Assurer qu'il y a 3 évaluateurs par concours)
 INSERT INTO Evaluateur (numEvaluateur, specialite)
 VALUES
-(2, 'Paysages'),
-(3, 'Abstrait'),
-(4, 'Contemporain');
+(18, 'Paysages'), --club 1
+(19, 'Abstrait'),
+(20, 'Contemporain');
+(21, 'Paysages'), --club 2
+(22, 'Abstrait'),
+(23, 'Contemporain');
+(24, 'Paysages'), --club 3
+(25, 'Abstrait'),
+(26, 'Contemporain');
+(27, 'Paysages'), --club 4
+(28, 'Abstrait'),
+(29, 'Contemporain');
+(30, 'Paysages'), --club 5
+(31, 'Abstrait'),
+(32, 'Contemporain');
+(33, 'Paysages'), --club 6
+(34, 'Abstrait'),
+(35, 'Contemporain');
+(36, 'Paysages'), --club 7
+(37, 'Abstrait'),
+(38, 'Contemporain');
+(39, 'Paysages'), --club 8
+(40, 'Abstrait'),
+(41, 'Contemporain');
+(42, 'Paysages'), --club 9
+(43, 'Abstrait'),
+(44, 'Contemporain');
+(45, 'Paysages'), --club 10
+(46, 'Abstrait'),
+(47, 'Contemporain');
+
 
 -- Table Evaluation (Deux évaluateurs pour chaque dessin)
 INSERT INTO Evaluation (dateEvaluation, note, commentaire, numDessin, numEvaluateur)
@@ -290,7 +318,7 @@ VALUES
 (3, 3),
 (4, 3),
 (5, 3),
-(6, 3);
+(6, 3),
 (8, 3),
 (10, 3),
 (1, 4),
