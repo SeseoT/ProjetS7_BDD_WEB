@@ -17,6 +17,7 @@ if (!isset($_SESSION['username'])) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
     // Construire le tableau HTML
+    print_r($result);
     $html = '<table border="1">';
     $html .= '<tr>
                 <th>Prénom</th>
@@ -28,7 +29,6 @@ if (!isset($_SESSION['username'])) {
                 <th>Date de Début</th>
                 <th>Date de Fin</th>
               </tr>';
-    $html .= '<p>' . htmlspecialchars($result[0]) . '</p>';
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>';
                    foreach ($row as $attribut) {
