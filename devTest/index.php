@@ -7,11 +7,15 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 }else{//Redirection vers les pages spécialisé des clients
-    $query = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
-    $stmt = $pdo->prepare($query);
-    $stmt->bindParam(':id_user', $_SESSION['id_user']);
-    $stmt->execute();
-
+    try {
+        $query = "SELECT * FROM Administrateur WHERE numAdministrateur = :id_user";
+        $stmt = $pdo->prepare($query);
+        $stmt->bindParam(':id_user', $_SESSION['id_user']);
+        $stmt->execute();
+    }
+    catch (PDOException $e) {
+        die("Erreur lors de la connexion : " . $e->getMessage());
+    }
 }
 
 ?>
