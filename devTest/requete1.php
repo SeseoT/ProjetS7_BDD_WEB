@@ -31,7 +31,7 @@ if (!isset($_SESSION['username'])) {
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>';
                    foreach ($row as $attribut) {
-                       $html .= '<td>' . htmlspecialchars($attribut) . '</td>';
+                       $html .= '<td>' . htmlspecialchars($row) . '</td>';
                    }
         $html .= '</tr>';
     }
