@@ -517,6 +517,7 @@ VALUES
 (2, 52),
 (2, 53),
 
+
 /*INSERT INTO CompetiteurParticipe (numConcours, numCompetiteur)
 SELECT 1, numUtilisateur
 FROM Utilisateur
