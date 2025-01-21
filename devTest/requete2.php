@@ -35,6 +35,16 @@ ORDER BY moyenneNote ";
                 <th>Theme Concours</th>
                 <th>Descriptif Concours</th>
               </tr>';
+    foreach ($result as $row) {
+        $html .= '<tr>';
+        $html .= '<td>' . htmlspecialchars($row['nom']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['prenom']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['numDessin']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['moyenneNote']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['theme']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['descriptif']) . '</td>';
+        $html .= '</tr>';
+    }
     $html .= '</table>';
     // Envoyer le tableau
     echo $html;
