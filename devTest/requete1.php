@@ -30,10 +30,8 @@ if (!isset($_SESSION['username'])) {
               </tr>';
     foreach ($result as $row) {//$row['prenom']
         $html .= '<tr>';
-        $html .= '<td>' . htmlspecialchars($row) . '</td>';
-
                    foreach ($row as $attribut) {
-
+                       $html .= '<td>' . htmlspecialchars($attribut) . '</td>';
                    }
         $html .= '</tr>';
     }
