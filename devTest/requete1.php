@@ -16,7 +16,33 @@ if (!isset($_SESSION['username'])) {
     catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
-    echo $result;
+    // Construire le tableau HTML
+    $html = '<table border="1">';
+    $html .= '<tr>
+                <th>Prénom</th>
+                <th>Nom</th>
+                <th>Adresse</th>
+                <th>Nom du Club</th>
+                <th>Département</th>
+                <th>Région</th>
+                <th>Date de Début</th>
+                <th>Date de Fin</th>
+              </tr>';
+    foreach ($result as $row) {
+        $html .= '<tr>
+                    <td>' . htmlspecialchars($row['prenom']) . '</td>
+                    <td>' . htmlspecialchars($row['nom']) . '</td>
+                    <td>' . htmlspecialchars($row['adresse']) . '</td>
+                    <td>' . htmlspecialchars($row['nomClub']) . '</td>
+                    <td>' . htmlspecialchars($row['departement']) . '</td>
+                    <td>' . htmlspecialchars($row['region']) . '</td>
+                    <td>' . htmlspecialchars($row['dateDebut']) . '</td>
+                    <td>' . htmlspecialchars($row['dateFin']) . '</td>
+                  </tr>';
+    }
+    $html .= '</table>';
+    // Envoyer le tableau
+    echo $html;
 }
 ?>
 ;
