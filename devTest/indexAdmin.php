@@ -17,9 +17,12 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-    <h1>Bienvenue, <?= htmlspecialchars($_SESSION['username']); ?> !</h1>
-    <p>Admin vous êtes connecté avec succès.</p>
+!-- Header -->
+<!-- Menu de navigation -->
+<div class="menu">
+    <a href="index.php">Accueil</a>
+    <a href="concoursUser.php">Mes Concours</a>
+    <a href="profile.php">Mon Profil</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
 <button id="fetchDataR1">Requete 1</button>
