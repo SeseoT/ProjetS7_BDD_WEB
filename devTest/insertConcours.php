@@ -45,6 +45,7 @@ VALUES (
             exit();
         }
     } catch (PDOException $e) {
+        print_r($numPresident);
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
 }
