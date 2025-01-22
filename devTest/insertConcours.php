@@ -38,6 +38,7 @@ if (!isset($_SESSION['username'])) {
     // Exécuter la requête
     if ($stmt->execute()) {
         echo "Utilisateur ajouté avec succès !";
+        exit();
     } else {
         echo "Erreur lors de l'insertion.";
     }

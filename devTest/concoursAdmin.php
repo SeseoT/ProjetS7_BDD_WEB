@@ -76,7 +76,7 @@ if (!isset($_SESSION['username'])) {
                 // Envoyer le tableau
                 echo $listUser;
             ?>
-        <button type="submit">Ajouter l'utilisateur</button>
+        <button type="submit">Ajouter le concours</button>
     </form>
 </div>
 
