@@ -8,46 +8,41 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
 
-    //$theme = htmlspecialchars(trim($_POST['theme']));
-    //$date_debut = htmlspecialchars(trim($_POST['date_debut']));
-    //$date_fin = htmlspecialchars(trim($_POST['date_fin']));
-    //$description = htmlspecialchars(trim($_POST['description'])); // Récupération de la description
-    //$numPresident = htmlspecialchars(trim($_POST['numPresident']));
+    $theme = htmlspecialchars(trim($_POST['theme']));
+    $date_debut = htmlspecialchars(trim($_POST['date_debut']));
+    $date_fin = htmlspecialchars(trim($_POST['date_fin']));
+    $description = htmlspecialchars(trim($_POST['description'])); // Récupération de la description
+    $numPresident = htmlspecialchars(trim($_POST['numPresident']));
 
-    //if (strlen($description) > 200) {
-    //  echo "La description dépasse les 200 caractères autorisés.";
-    //  exit();
-    //}
+    if (strlen($description) > 200) {
+        echo "La description dépasse les 200 caractères autorisés.";
+        exit();
+    }
     // Requête d'insertion
     $query = "INSERT INTO Concours (theme, dateDebut, dateFin, etat, descriptif, numPresident) 
 VALUES (
-    'Photographie Nature TESE PAGE',  
-    '2025-02-01',           
-    '2025-03-01',           
-    'Ouvert',               
-    'Un concours de photographie mettant en valeur la beauté de la nature.', 
-    1                       
-);";
-    //:theme,
-    //:date_debut,
-    //:date_fin,
-    //'Non commence',
-    //:description,
-    //:numPresident)
+    :theme,
+    :date_debut,
+    :date_fin,
+    'Non commence',
+    :description,
+    :numPresident);";
+
 
     $stmt = $connexion->prepare($query);
-    //$stmt->bindParam(':theme', $theme);
-    //$stmt->bindParam(':date_debut', $date_debut);
-    //$stmt->bindParam(':date_fin', $date_fin);
-    //$stmt->bindParam(':description', $description);
-    //$stmt->bindParam(':numPresident', $numPresident);
+    $stmt->bindParam(':theme', $theme);
+    $stmt->bindParam(':date_debut', $date_debut);
+    $stmt->bindParam(':date_fin', $date_fin);
+    $stmt->bindParam(':description', $description);
+    $stmt->bindParam(':numPresident', $numPresident);
 
     // Exécuter la requête
     if ($stmt->execute()) {
-        echo "Utilisateur ajouté avec succès !";
+        header("Location: index.php"); // Rediriger vers le tableau de bord
         exit();
     } else {
-        echo "Erreur lors de l'insertion.";
+        header("Location: index.php"); // Rediriger vers le tableau de bord
+        exit();
     }
 }
 ?>
