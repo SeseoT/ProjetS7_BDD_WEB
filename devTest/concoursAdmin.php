@@ -70,7 +70,7 @@ if (!isset($_SESSION['username'])) {
                 }
                 $listUser .='<select name="numPresident" id="numPresident">';
                 foreach ($result as $row) {//$row['prenom']
-                    $listUser .= '<option value="utilisateur">'. htmlspecialchars($row['numUtilisateur']) .'</option>';
+                    $listUser .= '<option value='. htmlspecialchars($row['numUtilisateur']) .'>'. htmlspecialchars($row['nom']) .'</option>';
                 }
                 $listUser .='</select>';
                 // Envoyer le tableau
