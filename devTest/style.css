@@ -19,6 +19,18 @@ body {
     position: relative;  /* Position relative */
 }
 
+/* Conteneur principal texte centré*/
+.container.center {
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;  /* Position relative */
+    text-align: center;
+}
+
 /* Titres */
 h1, h2 {
     text-align: center;
@@ -165,4 +177,19 @@ a:hover {
     .menu {
         flex-direction: column;
     }
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Vert */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #45a049; /* Couleur plus foncée au survol */
 }

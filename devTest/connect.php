@@ -2,7 +2,7 @@
 define('USER', "db_etu");           // Nom d'utilisateur de la base de données
 define('PASSWD', "N3twork!");        // Mot de passe de la base de données
 define('SERVER', "localhost");    // Hôte du serveur de base de données
-define('BASE', "ProjetDessins");        // Nom de la base de données
+define('BASE', "db_site");        // Nom de la base de données
 //define('BASE', "db_site");        // Nom de la base de données
 
 try {
