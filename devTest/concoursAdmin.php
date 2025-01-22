@@ -56,7 +56,7 @@ if (!isset($_SESSION['username'])) {
                   placeholder="Ajoutez une courte description (200 caractères max)" required></textarea><br><br>
 
 
-        <label for="numPresident">Numero president :</label>
+        <label for="numeroPresident">Numero president :</label>
             <?php
                 try {
                     $sql = "SELECT Utilisateur.nom, Utilisateur.prenom ,Utilisateur.numUtilisateur

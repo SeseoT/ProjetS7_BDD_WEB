@@ -34,7 +34,7 @@ VALUES (
         $stmt->bindParam(':date_debut', $date_debut);
         $stmt->bindParam(':date_fin', $date_fin);
         $stmt->bindParam(':description', $description);
-        $stmt->bindParam(':numPresident', $numPresident);
+        $stmt->bindParam(':numPresident', $numPresident, PDO::PARAM_INT);
 
         // Exécuter la requête
         if ($stmt->execute()) {
