@@ -41,7 +41,7 @@ if (!isset($_SESSION['username'])) {
     <h2>Créer un concours</h2>
         <div class="user-info">
         </div>
-    <form method="post" action="insertConcours.php">
+    <form method="POST" action="insertConcours.php">
         <label for="theme">Theme</label>
         <input type="text" name="theme" id="theme" required>
 
