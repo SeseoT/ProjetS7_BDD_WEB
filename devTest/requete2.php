@@ -8,13 +8,13 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
     try {
-        $sql = "SELECT U.nom, U.prenom,D.numDessin , AVG(E.note) AS moyenneNote, Concours.theme,Concours.descriptif
+        $sql = "SELECT U.nom, U.prenom,D.numDessin , AVG(E.note) AS moyenneNote,           Concours.theme,Concours.descriptif
 FROM Evaluation E, Dessin D, Competiteur C, Utilisateur U  , Concours
-WHERE YEAR(E.dateEvaluation) = 2024  
-  AND E.numDessin = D.numDessin  
-  AND D.numCompetiteur = C.numCompetiteur  
-  AND C.numCompetiteur = U.numUtilisateur  
-GROUP BY U.nom, U.prenom
+WHERE YEAR(E.dateEvaluation) = 2024
+  AND E.numDessin = D.numDessin
+  AND D.numCompetiteur = C.numCompetiteur
+  AND C.numCompetiteur = U.numUtilisateur
+GROUP BY U.nom, U.prenom,D.numDessin
 ORDER BY moyenneNote ";
 
         $stmt = $connexion->prepare($sql);
