@@ -17,7 +17,6 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-!-- Header -->
 <!-- Menu de navigation -->
 <div class="menu">
     <a href="index.php">Accueil</a>
