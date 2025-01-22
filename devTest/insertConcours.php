@@ -38,10 +38,10 @@ VALUES (
 
         // Exécuter la requête
         if ($stmt->execute()) {
-            header("Location: index.php"); // Rediriger vers le tableau de bord
+            header("Location: concoursAdmin.php"); // Rediriger vers le tableau de bord
             exit();
         } else {
-            header("Location: index.php"); // Rediriger vers le tableau de bord
+            header("Location: concoursAdmin.php"); // Rediriger vers le tableau de bord
             exit();
         }
     } catch (PDOException $e) {
