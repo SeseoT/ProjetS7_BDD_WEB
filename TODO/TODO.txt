@@ -3,7 +3,13 @@ Objectifs interface WEB :
 1 -POK- Une interface WEB permettant la connexion/déconnexion d’au moins un administrateur et un autre type d’utilisateur.
 2 -NOK- Toutes les requêtes imposées ou proposées doivent être dynamiquement exécutées à partir d’une interface Web et le résultat visualisé.
 2 - Création des vus indexUser/IndexAdmin/
+
 3 -NOK- Des insertions via l’interface dans au moins 2 tables différentes (concours, utilisateur,)
+Directeur CLUB =
+                Ajouter User a son club,
+                Ajouter a un concours donner des compétiteurs et évaluateur
+
+Admin = Ajouter un concours avec un Président.
 4 -NOK- Toute fonctionnalité supplémentaire serait une plus-value
 
 Objectifs livrables Word :
