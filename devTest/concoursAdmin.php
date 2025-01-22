@@ -36,7 +36,53 @@ if (!isset($_SESSION['username'])) {
     <a href="logout.php">Se déconnecter</a>
 </div>
 
+<!-- Contenu principal -->
+<div class="container">
+    <h2>Créer un concours</h2>
+        <div class="user-info">
+        </div>
+    <form method="post" action="insertConcours.php">
+        <label for="theme">Theme</label>
+        <input type="text" name="theme" id="theme" required>
+
+        <label for="date_debut">Date de Début :</label>
+        <input type="date" name="date_debut" id="date_debut" required><br><br>
+
+        <label for="date_fin">Date de Fin :</label>
+        <input type="date" name="date_fin" id="date_fin" required><br><br>
+
+        <label for="description">Description :</label><br>
+        <textarea name="description" id="description" rows="5" cols="40" maxlength="200"
+                  placeholder="Ajoutez une courte description (200 caractères max)" required></textarea><br><br>
+
+
+        <label for="numPresident">Numero president :</label>
+            <?php
+                try {
+                    $sql = "SELECT Utilisateur.nom, Utilisateur.prenom ,Utilisateur.numUtilisateur
+                            FROM Utilisateur;";
+                    $stmt = $connexion->prepare($sql);
+                    $stmt->execute();
+                    $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+                }
+                catch (PDOException $e) {
+                    die("Erreur lors de la connexion : " . $e->getMessage());
+                }
+                $listUser .='<select name="numPresident" id="numPresident">';
+                foreach ($result as $row) {//$row['prenom']
+                    $listUser .= '<option value="utilisateur">'. htmlspecialchars($row['numUtilisateur']) .'</option>';
+                }
+                $listUser .='</select>';
+                // Envoyer le tableau
+                echo $listUser;
+            ?>
+        <button type="submit">Ajouter l'utilisateur</button>
+    </form>
+</div>
+
+
 <div class="container center">
+    <h2>Liste des concours actuel</h2>
     <?php
         try {
             $sql = "SELECT * FROM Concours";
@@ -76,13 +122,7 @@ if (!isset($_SESSION['username'])) {
 
 
 
-<!-- Contenu principal -->
-<div class="container">
-    <h2>Liste des concours passés</h2>
-    <div class="user-info">
-        <p><span class="user-data">Theme :</span> <?= htmlspecialchars($theme); ?></p>
-    </div>
-</div>
+
 
 </body>
 
