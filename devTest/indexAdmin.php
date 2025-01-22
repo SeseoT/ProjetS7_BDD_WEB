@@ -32,6 +32,12 @@ if (!isset($_SESSION['username'])) {
 <div id="dataTableR4"></div>
 <button id="fetchDataR5">Requete 5</button>
 <div id="dataTableR5"></div>
+<button id="fetchDataR6">Requete 6</button>
+<div id="dataTableR6"></div>
+<button id="fetchDataR7">Requete 7</button>
+<div id="dataTableR7"></div>
+<button id="fetchDataR8">Requete 8</button>
+<div id="dataTableR8"></div>
 <script>
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
@@ -79,9 +85,33 @@ if (!isset($_SESSION['username'])) {
             })
             .catch(error => console.error('Erreur:', error));
     });
-
-
-
+    document.getElementById('fetchDataR6').addEventListener('click', () => {
+        fetch('requete6.php')
+            .then(response => {
+                return response.text()})
+            .then(data => {
+                document.getElementById('dataTableR6').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    });
+    document.getElementById('fetchDataR7').addEventListener('click', () => {
+        fetch('requete7.php')
+            .then(response => {
+                return response.text()})
+            .then(data => {
+                document.getElementById('dataTableR7').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    });
+    document.getElementById('fetchDataR8').addEventListener('click', () => {
+        fetch('requete8.php')
+            .then(response => {
+                return response.text()})
+            .then(data => {
+                document.getElementById('dataTableR8').innerHTML = data;
+            })
+            .catch(error => console.error('Erreur:', error));
+    });
 </script>
 </body>
 </html>
