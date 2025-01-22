@@ -20,7 +20,7 @@ if (!isset($_SESSION['username'])) {
 <!-- Menu de navigation -->
 <div class="menu">
     <a href="index.php">Accueil</a>
-    <a href="concoursUser.php">Mes Concours</a>
+    <a href="concoursAdmin.php">Les Concours</a>
     <a href="profile.php">Mon Profil</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
