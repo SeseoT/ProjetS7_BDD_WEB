@@ -35,7 +35,7 @@ VALUES (
     //:description,
     //:numPresident)
 
-    $stmt = $pdo->prepare($query);
+    $stmt = $connexion->prepare($query);
     //$stmt->bindParam(':theme', $theme);
     //$stmt->bindParam(':date_debut', $date_debut);
     //$stmt->bindParam(':date_fin', $date_fin);
