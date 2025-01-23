@@ -21,25 +21,28 @@ if (!isset($_SESSION['username'])) {
 <div class="menu">
     <a href="index.php">Accueil</a>
     <a href="concoursAdmin.php">Les Concours</a>
+    <a href="concoursAdmin.php">Les Clubs</a>
     <a href="profile.php">Mon Profil</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
-<button id="fetchDataR1">Requete 1</button>
-<div id="dataTableR1"></div>
-<button id="fetchDataR2">Requete 2</button>
-<div id="dataTableR2"></div>
-<button id="fetchDataR3">Requete 3</button>
-<div id="dataTableR3"></div>
-<button id="fetchDataR4">Requete 4</button>
-<div id="dataTableR4"></div>
-<button id="fetchDataR5">Requete 5</button>
-<div id="dataTableR5"></div>
-<button id="fetchDataR6">Requete 6</button>
-<div id="dataTableR6"></div>
-<button id="fetchDataR7">Requete 7</button>
-<div id="dataTableR7"></div>
-<button id="fetchDataR8">Requete 8</button>
-<div id="dataTableR8"></div>
+<div class="container center">
+    <button id="fetchDataR1">Requete 1</button>
+    <div id="dataTableR1"></div>
+    <button id="fetchDataR2">Requete 2</button>
+    <div id="dataTableR2"></div>
+    <button id="fetchDataR3">Requete 3</button>
+    <div id="dataTableR3"></div>
+    <button id="fetchDataR4">Requete 4</button>
+    <div id="dataTableR4"></div>
+    <button id="fetchDataR5">Requete 5</button>
+    <div id="dataTableR5"></div>
+    <button id="fetchDataR6">Requete 6</button>
+    <div id="dataTableR6"></div>
+    <button id="fetchDataR7">Requete 7</button>
+    <div id="dataTableR7"></div>
+    <button id="fetchDataR8">Requete 8</button>
+    <div id="dataTableR8"></div>
+</div>
 <script>
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
