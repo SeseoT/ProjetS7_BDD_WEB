@@ -25,23 +25,34 @@ if (!isset($_SESSION['username'])) {
     <a href="profile.php">Mon Profil</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
+<style>
+    .scrollable-table {
+        max-height: 300px; /* Limiter la hauteur maximale */
+        overflow-y: auto; /* Activer le défilement vertical */
+        width: 100%; /* S'assurer que le tableau utilise toute la largeur du parent */
+        border: 1px solid #ccc; /* Ajouter une bordure pour distinguer */
+        padding: 10px; /* Ajouter de l'espace interne */
+        box-sizing: border-box;
+        background-color: #f9f9f9; /* Couleur de fond pour lisibilité */
+    }
+</style>
 <div class="container center">
     <button id="fetchDataR1">Requete 1</button>
-    <div id="dataTableR1"></div>
+    <div id="dataTableR1" class="scrollable-table"></div>
     <button id="fetchDataR2">Requete 2</button>
-    <div id="dataTableR2"></div>
+    <div id="dataTableR2" class="scrollable-table"></div>
     <button id="fetchDataR3">Requete 3</button>
-    <div id="dataTableR3"></div>
+    <div id="dataTableR3" class="scrollable-table"></div>
     <button id="fetchDataR4">Requete 4</button>
-    <div id="dataTableR4"></div>
+    <div id="dataTableR4" class="scrollable-table"></div>
     <button id="fetchDataR5">Requete 5</button>
-    <div id="dataTableR5"></div>
+    <div id="dataTableR5" class="scrollable-table"></div>
     <button id="fetchDataR6">Requete 6</button>
-    <div id="dataTableR6"></div>
+    <div id="dataTableR6" class="scrollable-table"></div>
     <button id="fetchDataR7">Requete 7</button>
-    <div id="dataTableR7"></div>
+    <div id="dataTableR7" class="scrollable-table"></div>
     <button id="fetchDataR8">Requete 8</button>
-    <div id="dataTableR8"></div>
+    <div id="dataTableR8" class="scrollable-table"></div>
 </div>
 <script>
     document.getElementById('fetchDataR1').addEventListener('click', () => {
