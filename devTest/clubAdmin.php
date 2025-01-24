@@ -38,7 +38,7 @@ if (!isset($_SESSION['username'])) {
 
     <!-- Contenu principal -->
     <div class="container center">
-        <h2>Liste des concours actuel</h2>
+        <h2>Liste des clubs actuels</h2>
         <?php
         try {
             $sql = "SELECT * FROM Club";
