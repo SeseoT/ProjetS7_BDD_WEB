@@ -75,11 +75,6 @@ if (!isset($_SESSION['username'])) {
         z-index: 1001;
     }
 
-    /* Effet de flou sur la page quand l'overlay est actif */
-    .blurred {
-        filter: blur(5px);
-        pointer-events: none; /* Désactiver les clics */
-    }
 
 
 </style>
@@ -234,12 +229,10 @@ if (!isset($_SESSION['username'])) {
 
         // Activer l'overlay
         overlay.classList.add("active");
-        document.body.classList.add("blurred"); // Appliquer l'effet de flou
 
         // Après 5 secondes, désactiver l'overlay et retirer le flou
         setTimeout(() => {
             overlay.classList.remove("active");
-            document.body.classList.remove("blurred");
         }, 3000); // 5000ms = 5 secondes
     });
 
