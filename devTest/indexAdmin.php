@@ -239,7 +239,7 @@ if (!isset($_SESSION['username'])) {
         setTimeout(() => {
             overlay.classList.remove("active");
             alreadyShownR1 =true;
-        }, 3000); // 5000ms = 5 secondes
+        }, 5000); // 5000ms = 5 secondes
     });
 
 
