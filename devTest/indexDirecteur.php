@@ -8,7 +8,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 } else {
     try {
-        $sql = "SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.adresse, Club.nomClub
+        $sql = "SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.adresse, Club    .nomClub
         FROM Utilisateur, Club
         WHERE numUtilisateur = :id_user
         AND Utilisateur.numClub = Club.numClub";
