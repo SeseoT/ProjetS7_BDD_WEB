@@ -72,6 +72,7 @@ if (!isset($_SESSION['username'])) {
         padding: 20px;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 8px;
+        z-index: 1001;
     }
 
     /* Effet de flou sur la page quand l'overlay est actif */
@@ -239,7 +240,7 @@ if (!isset($_SESSION['username'])) {
         setTimeout(() => {
             overlay.classList.remove("active");
             document.body.classList.remove("blurred");
-        }, 5000); // 5000ms = 5 secondes
+        }, 3000); // 5000ms = 5 secondes
     });
 
 
