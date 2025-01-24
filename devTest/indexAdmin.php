@@ -74,7 +74,12 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR1').innerHTML = data;
-                document.getElementById('dataTableR1').classList.remove("hidden");
+                if (document.getElementById('dataTableR1').classList.contains("hidden")) {
+                    document.getElementById('dataTableR1').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR1').classList.add("hidden");
+                }
+
             })
             .catch(error => console.error('Erreur:', error));
     });
