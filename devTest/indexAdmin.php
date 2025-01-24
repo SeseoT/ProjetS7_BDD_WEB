@@ -79,7 +79,6 @@ if (!isset($_SESSION['username'])) {
                 }else{
                     document.getElementById('dataTableR1').classList.add("hidden");
                 }
-
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -90,7 +89,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR2').innerHTML = data;
-                document.getElementById('dataTableR2').classList.remove("hidden");
+                if (document.getElementById('dataTableR2').classList.contains("hidden")) {
+                    document.getElementById('dataTableR2').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR2').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -100,7 +103,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR3').innerHTML = data;
-                document.getElementById('dataTableR3').classList.remove("hidden");
+                if (document.getElementById('dataTableR3').classList.contains("hidden")) {
+                    document.getElementById('dataTableR3').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR3').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -110,7 +117,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR4').innerHTML = data;
-                document.getElementById('dataTableR4').classList.remove("hidden");
+                if (document.getElementById('dataTableR4').classList.contains("hidden")) {
+                    document.getElementById('dataTableR4').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR4').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -120,7 +131,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR5').innerHTML = data;
-                document.getElementById('dataTableR5').classList.remove("hidden");
+                if (document.getElementById('dataTableR5').classList.contains("hidden")) {
+                    document.getElementById('dataTableR5').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR5').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -130,7 +145,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR6').innerHTML = data;
-                document.getElementById('dataTableR6').classList.remove("hidden");
+                if (document.getElementById('dataTableR6').classList.contains("hidden")) {
+                    document.getElementById('dataTableR6').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR6').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -140,7 +159,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR7').innerHTML = data;
-                document.getElementById('dataTableR7').classList.remove("hidden");
+                if (document.getElementById('dataTableR7').classList.contains("hidden")) {
+                    document.getElementById('dataTableR7').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR7').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
@@ -150,7 +173,11 @@ if (!isset($_SESSION['username'])) {
                 return response.text()})
             .then(data => {
                 document.getElementById('dataTableR8').innerHTML = data;
-                document.getElementById('dataTableR8').classList.remove("hidden");
+                if (document.getElementById('dataTableR8').classList.contains("hidden")) {
+                    document.getElementById('dataTableR8').classList.remove("hidden");
+                }else{
+                    document.getElementById('dataTableR8').classList.add("hidden");
+                }
             })
             .catch(error => console.error('Erreur:', error));
     });
