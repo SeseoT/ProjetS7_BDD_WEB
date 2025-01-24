@@ -91,9 +91,6 @@ else {
 <div class="container">
 
     <h2>Vos informations personnelles : </h2>
-    <p>aaa<?= htmlspecialchars($_SESSION['id_user']); ?>bbb</p>
-    <p><?= htmlspecialchars($result['numClub']); ?></p>
-    <p>numclub</p>
     <div class="formulaireNouveauParticipant">
         <form method="POST" action="">
 
