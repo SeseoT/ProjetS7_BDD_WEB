@@ -111,6 +111,9 @@ if (!isset($_SESSION['username'])) {
     <div class="overlay-text" id="tooltipText"></div>
 </div>
 <script>
+    const overlay = document.getElementById("tooltipOverlay");
+    const overlayText = document.getElementById("tooltipText");
+
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
             .then(response => {
@@ -226,16 +229,12 @@ if (!isset($_SESSION['username'])) {
 
     document.getElementById('fetchDataR1').addEventListener("mouseenter", () => {
         const tooltipText = document.getElementById('fetchDataR1').getAttribute("data-tooltip");
-        const overlay = document.getElementById("tooltipOverlay");
-        const overlayText = document.getElementById("tooltipText");
-
         overlayText.textContent = tooltipText;
         overlay.classList.add("active");
         document.body.classList.add("blurred"); // Appliquer l'effet de flou
     });
 
     document.getElementById('fetchDataR1').addEventListener("mouseleave", () => {
-        const overlay = document.getElementById("tooltipOverlay");
         overlay.classList.remove("active");
         document.body.classList.remove("blurred"); // Enlever l'effet de flou
     });
