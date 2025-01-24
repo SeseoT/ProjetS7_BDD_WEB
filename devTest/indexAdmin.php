@@ -34,6 +34,8 @@ if (!isset($_SESSION['username'])) {
         padding: 10px; /* Ajouter de l'espace interne */
         box-sizing: border-box;
         background-color: #f9f9f9; /* Couleur de fond pour lisibilité */
+        justify-content: center; /* Centrer horizontalement le contenu */
+        align-items: center; /* Centrer verticalement le contenu */
     }
 
     .scrollable-table.hidden {
