@@ -78,6 +78,7 @@ if (!isset($_SESSION['username'])) {
 
 </style>
 <div class="container center">
+    <h2>Les requetes SQL</h2>
     <button id="fetchDataR1" data-tooltip="Texte pour Requete 1">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
     <br>
