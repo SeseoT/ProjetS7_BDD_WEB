@@ -45,18 +45,25 @@ if (!isset($_SESSION['username'])) {
 <div class="container center">
     <button id="fetchDataR1">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR2">Requete 2</button>
     <div id="dataTableR2" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR3">Requete 3</button>
     <div id="dataTableR3" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR4">Requete 4</button>
     <div id="dataTableR4" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR5">Requete 5</button>
     <div id="dataTableR5" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR6">Requete 6</button>
     <div id="dataTableR6" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR7">Requete 7</button>
     <div id="dataTableR7" class="scrollable-table hidden"></div>
+    <br>
     <button id="fetchDataR8">Requete 8</button>
     <div id="dataTableR8" class="scrollable-table hidden"></div>
 </div>
