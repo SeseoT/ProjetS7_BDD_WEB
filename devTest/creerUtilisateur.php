@@ -4,28 +4,31 @@ require("connect.php"); // Inclure la configuration de connexion
 
 // Vérifier si l'utilisateur est connecté
 if (!isset($_SESSION['username'])) {
-    header("Location: login.php");
+    header("Location:login.php");
     exit();
 }
 else {
 
+    if (isset($_SESSION['isDirecteur']) && $_SESSION['isDirecteur'] != 1){
+        echo"Vous n'etes pas directeur erreur";
+        header("Location:indexUser.php");
+        exit();
+    }
+
     try {
-        $sql_idClub = 'SELECT Directeur.numClub FROM Directeur WHERE Directeur.numDirecteur = ".$_SESSION["id_user"]."';
+        $sql_idClub = 'SELECT numClub FROM Directeur  WHERE Directeur.numDirecteur = :id_user';
         $stmt_idClub = $connexion->prepare($sql_idClub);
         $stmt_idClub->bindParam(':id_user', $_SESSION['id_user']);
         $stmt_idClub->execute();
         $result = $stmt_idClub->fetch(PDO::FETCH_ASSOC);
-
 
     } catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
 
 
-    if (!empty($_POST['nom']) && !empty($_POST['prenom']) && !empty($_POST['age']) && !empty($_POST['adresse']) && !empty($_POST['login']) && !empty($_POST['motDePasse']) && !empty($_POST['numClub']))
+    if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create']))
     {
-
-       if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
 
           try {
              $sql_CreerUtilisateur = "INSERT INTO Utilisateur (numUtilisateur, nom, prenom,age , adresse, login, motDePasse, numClub)
@@ -47,8 +50,6 @@ else {
           } catch (PDOException $e) {
           echo "<p class='error'>Erreur lors de l'ajout : ".htmlspecialchars($e->getMessage())."</p>";
           }
-      }
-
 
     }else {
       echo "<p class='error'>Tous les champs sont obligatoires.</p>";
