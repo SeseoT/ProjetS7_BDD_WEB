@@ -39,6 +39,15 @@ VALUES (
         // Exécuter la requête
         if ($stmt->execute()) {
             header("Location: concoursAdmin.php"); // Rediriger vers le tableau de bord
+
+            // the message
+            $msg = "Bonjours, félécitation votre concours a été crée.";
+
+            // use wordwrap() if lines are longer than 70 characters
+            $msg = wordwrap($msg,70);
+
+            // send email
+            mail("tangy.suto@gmail.com","TEST CONCOURS EMAIL",$msg);
             exit();
         } else {
             header("Location: concoursAdmin.php"); // Rediriger vers le tableau de bord
