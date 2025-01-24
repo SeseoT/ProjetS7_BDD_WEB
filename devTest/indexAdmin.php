@@ -230,14 +230,18 @@ if (!isset($_SESSION['username'])) {
     document.getElementById('fetchDataR1').addEventListener("mouseenter", () => {
         const tooltipText = document.getElementById('fetchDataR1').getAttribute("data-tooltip");
         overlayText.textContent = tooltipText;
+
+        // Activer l'overlay
         overlay.classList.add("active");
         document.body.classList.add("blurred"); // Appliquer l'effet de flou
+
+        // Après 5 secondes, désactiver l'overlay et retirer le flou
+        setTimeout(() => {
+            overlay.classList.remove("active");
+            document.body.classList.remove("blurred");
+        }, 5000); // 5000ms = 5 secondes
     });
 
-    document.getElementById('fetchDataR1').addEventListener("mouseleave", () => {
-        overlay.classList.remove("active");
-        document.body.classList.remove("blurred"); // Enlever l'effet de flou
-    });
 
 </script>
 </body>
