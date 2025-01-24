@@ -43,10 +43,47 @@ if (!isset($_SESSION['username'])) {
         display: none;
     }
 
+    /* Overlay (flou + texte au centre) */
+    .overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: 1000; /* Toujours au-dessus */
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s ease;
+    }
+
+    .overlay.active {
+        opacity: 1;
+        pointer-events: all;
+    }
+
+    .overlay-text {
+        color: white;
+        font-size: 24px;
+        text-align: center;
+        padding: 20px;
+        background: rgba(0, 0, 0, 0.7);
+        border-radius: 8px;
+    }
+
+    /* Effet de flou sur la page quand l'overlay est actif */
+    .blurred {
+        filter: blur(5px);
+        pointer-events: none; /* Désactiver les clics */
+    }
+
 
 </style>
 <div class="container center">
-    <button id="fetchDataR1" title="Afficher/Replier le tableau de Requête 1">Requete 1</button>
+    <button id="fetchDataR1" data-tooltip="Texte pour Requete 1">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
     <br>
     <button id="fetchDataR2">Requete 2</button>
@@ -70,6 +107,9 @@ if (!isset($_SESSION['username'])) {
     <button id="fetchDataR8">Requete 8</button>
     <div id="dataTableR8" class="scrollable-table hidden"></div>
 </div>
+<div class="overlay" id="tooltipOverlay">
+    <div class="overlay-text" id="tooltipText"></div>
+</div>
 <script>
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
@@ -85,7 +125,6 @@ if (!isset($_SESSION['username'])) {
             })
             .catch(error => console.error('Erreur:', error));
     });
-
     document.getElementById('fetchDataR2').addEventListener('click', () => {
         fetch('requete2.php')
             .then(response => {
@@ -184,6 +223,23 @@ if (!isset($_SESSION['username'])) {
             })
             .catch(error => console.error('Erreur:', error));
     });
+
+    document.getElementById('fetchDataR1').addEventListener("mouseenter", () => {
+        const tooltipText = document.getElementById('fetchDataR1').getAttribute("data-tooltip");
+        const overlay = document.getElementById("tooltipOverlay");
+        const overlayText = document.getElementById("tooltipText");
+
+        overlayText.textContent = tooltipText;
+        overlay.classList.add("active");
+        document.body.classList.add("blurred"); // Appliquer l'effet de flou
+    });
+
+    document.getElementById('fetchDataR1').addEventListener("mouseleave", () => {
+        const overlay = document.getElementById("tooltipOverlay");
+        overlay.classList.remove("active");
+        document.body.classList.remove("blurred"); // Enlever l'effet de flou
+    });
+
 </script>
 </body>
 </html>
