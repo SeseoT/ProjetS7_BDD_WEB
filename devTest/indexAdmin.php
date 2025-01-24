@@ -46,7 +46,7 @@ if (!isset($_SESSION['username'])) {
 
 </style>
 <div class="container center">
-    <button id="fetchDataR1">Requete 1</button>
+    <button id="fetchDataR1" title="Afficher/Replier le tableau de Requête 1">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
     <br>
     <button id="fetchDataR2">Requete 2</button>
