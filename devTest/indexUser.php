@@ -71,7 +71,7 @@ if (!isset($_SESSION['username'])) {
 <!-- Contenu principal -->
 <div class="container">
 
-    <h2>Vos  personnelles : </h2>
+    <h2>Vos informations personnelles : </h2>
     <div class="user-info">
         <p><span class="user-data">Prénom :</span> <?= htmlspecialchars($prenom); ?></p>
         <p><span class="user-data">Nom :</span> <?= htmlspecialchars($nom); ?></p>
