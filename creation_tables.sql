@@ -67,7 +67,7 @@ CREATE TABLE Competiteur (
 );
 
 CREATE TABLE Concours (
-    numConcours INT PRIMARY KEY,
+    numConcours INT AUTO_INCREMENT PRIMARY KEY,
     theme VARCHAR(100) NOT NULL,
     dateDebut DATE NOT NULL,
     dateFin DATE NOT NULL,
@@ -131,3 +131,24 @@ CREATE TABLE EvaluateurJury (
     FOREIGN KEY (numConcours) REFERENCES Concours(numConcours) ON DELETE CASCADE,
     FOREIGN KEY (numEvaluateur) REFERENCES Evaluateur(numEvaluateur) ON DELETE CASCADE
 );
+
+DELIMITER //
+
+CREATE TRIGGER before_insert_concours
+    BEFORE INSERT ON Concours
+    FOR EACH ROW
+BEGIN
+    -- Vérifier si le président existe dans la table President
+    IF NOT EXISTS (
+            SELECT 1
+            FROM President
+            WHERE numPresident = NEW.numPresident
+        ) THEN
+        -- Ajouter le président dans la table President avec une prime par défaut
+        INSERT INTO President (numPresident, prime)
+        VALUES (NEW.numPresident, 0.00);
+    END IF;
+END;
+//
+
+DELIMITER ;

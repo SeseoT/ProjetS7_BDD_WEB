@@ -49,6 +49,4 @@ ORDER BY moyenneNote ";
     echo $html;
 }
 ?>
-;
-
 
