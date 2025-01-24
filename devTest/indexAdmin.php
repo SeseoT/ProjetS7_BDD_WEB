@@ -108,6 +108,8 @@ if (!isset($_SESSION['username'])) {
 <script>
     const overlay = document.getElementById("tooltipOverlay");
     const overlayText = document.getElementById("tooltipText");
+    let alreadyShownR1 = false; // Variable pour vérifier si l'overlay a été affiché pour ce bouton
+
 
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
@@ -119,6 +121,7 @@ if (!isset($_SESSION['username'])) {
                     document.getElementById('dataTableR1').classList.remove("hidden");
                 }else{
                     document.getElementById('dataTableR1').classList.add("hidden");
+                    alreadyShownR1 =false;
                 }
             })
             .catch(error => console.error('Erreur:', error));
@@ -223,6 +226,7 @@ if (!isset($_SESSION['username'])) {
     });
 
     document.getElementById('fetchDataR1').addEventListener("mouseenter", () => {
+        if(alreadyShownR1) return;
         const tooltipText = document.getElementById('fetchDataR1').getAttribute("data-tooltip");
         overlayText.textContent = tooltipText;
 
@@ -232,6 +236,7 @@ if (!isset($_SESSION['username'])) {
         // Après 5 secondes, désactiver l'overlay et retirer le flou
         setTimeout(() => {
             overlay.classList.remove("active");
+            alreadyShownR1 =true;
         }, 3000); // 5000ms = 5 secondes
     });
 
