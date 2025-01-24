@@ -50,4 +50,3 @@ LIMIT 1;
     echo $html;
 }
 ?>
-;
