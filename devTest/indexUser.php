@@ -64,7 +64,7 @@ if (!isset($_SESSION['username'])) {
 </div>
 
      <?php if (isset($_SESSION['isDirecteur']) && $_SESSION['isDirecteur'] == 1): ?>
-        <a href="indexDirecteur.php" class="bandeauDirecteur">Créer Participante</a>
+        <a href="creerUtilisateur.php" class="bandeauDirecteur">Créer Participante</a>
         <a href="choisirarticipants.php" class="bandeauDirecteur">Choisir Participants</a>
      <?php endif; ?>
 
