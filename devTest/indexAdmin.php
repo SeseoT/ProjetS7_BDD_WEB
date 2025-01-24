@@ -21,8 +21,7 @@ if (!isset($_SESSION['username'])) {
 <div class="menu">
     <a href="index.php">Accueil</a>
     <a href="concoursAdmin.php">Les Concours</a>
-    <a href="concoursAdmin.php">Les Clubs</a>
-    <a href="profile.php">Mon Profil</a>
+    <a href="clubAdmin.php">Les Clubs</a>
     <a href="logout.php">Se déconnecter</a>
 </div>
 <style>
