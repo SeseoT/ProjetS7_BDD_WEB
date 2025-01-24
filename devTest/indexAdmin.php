@@ -72,7 +72,6 @@ if (!isset($_SESSION['username'])) {
         padding: 20px;
         background: rgba(0, 0, 0, 0.7);
         border-radius: 8px;
-        z-index: 1001;
     }
 
 
