@@ -81,8 +81,7 @@ if (!isset($_SESSION['username'])) {
     <button id="fetchDataR1" data-tooltip="Texte pour Requete 1">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR2" title ="Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2022. \n
-     Vous afficherez les informations suivantes : le numéro du dessin et la note attribuée, le nom du compétiteur, la description du concours et le thème du concours." >Requete 2</button>
+    <button id="fetchDataR2" title ="Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2023." >Requete 2</button>
     <div id="dataTableR2" class="scrollable-table hidden"></div>
     <br>
     <button id="fetchDataR3">Requete 3</button>
