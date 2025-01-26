@@ -24,7 +24,7 @@ if (!isset($_SESSION['username'])) {
 <body>
 <!-- Menu de navigation -->
 <div class="menu">
-    <a href="index.php">AccueilLOLTESTE</a>
+    <a href="index.php">Accueil</a>
     <a href="concoursAdmin.php">Les Concours</a>
     <a href="clubAdmin.php">Les Clubs</a>
     <a href="logout.php">Se déconnecter</a>
