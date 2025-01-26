@@ -78,19 +78,20 @@ if (!isset($_SESSION['username'])) {
 </style>
 <div class="container center">
     <h2>Les requetes SQL</h2>
-    <button id="fetchDataR1" data-tooltip="Texte pour Requete 1">Requete 1</button>
+    <button id="fetchDataR1" title="Afficher le nom et l’adresse et l’âge de tous les compétiteurs qui ont participé dans un con-cours en 2023.">Requete 1</button>
     <div id="dataTableR1" class="scrollable-table hidden"></div>
     <br>
     <button id="fetchDataR2" title ="Afficher par ordre croissant de la note tous les dessins qui ont été évalués en 2023." >Requete 2</button>
     <div id="dataTableR2" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR3">Requete 3</button>
+    <button id="fetchDataR3" title = "Pour cette requête on vous demande d’afficher des informations sur tous les dessins qui ont été évalués et qui sont stockés dans la base.">Requete 3</button>
     <div id="dataTableR3" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR4">Requete 4</button>
+    <button id="fetchDataR4" title="Nom, prénom et âge des compétiteurs qui ont participé à tous les concours qui ont été
+    organisés. L’affichage doit se faire dans l’ordre croissant des âges.">Requete 4</button>
     <div id="dataTableR4" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR5">Requete 5</button>
+    <button id="fetchDataR5" title="Nom de la région qui a la meilleure moyenne des notes des dessins proposés.">Requete 5</button>
     <div id="dataTableR5" class="scrollable-table hidden"></div>
     <br>
     <button id="fetchDataR6">Requete 6</button>
