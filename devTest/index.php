@@ -37,6 +37,15 @@ if (!isset($_SESSION['username'])) {
 
     if($stmt->rowCount() > 0){
         header("Location: indexAdmin.php"); // Rediriger vers le tableau de bord
+        // the message
+        $msg = "Nouvelle connexion a votre compte admin";
+
+        // use wordwrap() if lines are longer than 70 characters
+        $msg = wordwrap($msg,70);
+
+        // send email
+        mail("tangy.suto@gmail.com","Connexion compte Admin",$msg);
+
         exit();
     }else{
         header("Location: indexUser.php"); // Rediriger vers le tableau de bord
