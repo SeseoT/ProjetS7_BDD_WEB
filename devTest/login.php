@@ -1,3 +1,6 @@
+<?php
+session_start(); // Pour gérer les sessions
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
