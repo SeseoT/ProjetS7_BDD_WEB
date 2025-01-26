@@ -225,25 +225,6 @@ if (!isset($_SESSION['username'])) {
             })
             .catch(error => console.error('Erreur:', error));
     });
-
-    document.getElementById('fetchDataR1').addEventListener("mouseenter", () => {
-        if(alreadyShownR1) return;
-        const tooltipText = "Afficher le nom et l’adresse et l’âge de tous les compétiteurs qui ont participé dans un concours en 2023. \n" +
-            " Vous afficherez aussi la description du concours la date de début et la date de fin.\n " +
-            "Le club du compétiteur, le département et la région.";//document.getElementById('fetchDataR1').getAttribute("data-tooltip");
-        overlayText.textContent = tooltipText;
-
-        // Activer l'overlay
-        overlay.classList.add("active");
-
-        // Après 5 secondes, désactiver l'overlay et retirer le flou
-        setTimeout(() => {
-            overlay.classList.remove("active");
-            alreadyShownR1 =true;
-        }, 5000); // 5000ms = 5 secondes
-    });
-
-
 </script>
 </body>
 </html>
