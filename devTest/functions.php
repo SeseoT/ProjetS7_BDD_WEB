@@ -24,6 +24,29 @@ function requeteSQL($id_user, $connexion, $sql, $fetchAll) {
     return $result;
 }
 
+function requeteSQLPresident($connexion, $sql, $fetchAll) {
+    try {
+        // Préparer la requête SQL avec l'ID de l'utilisateur
+        $stmt = $connexion->prepare($sql);
+        $stmt->execute();
+
+        // Récupérer les résultats de la requête
+        //$result = $stmt->fetch(PDO::FETCH_ASSOC);
+        
+        if ($fetchAll) {
+            $result = $stmt->fetchAll(PDO::FETCH_ASSOC); // Récupère tous les résultats sous forme de tableau
+        } else {
+            $result = $stmt->fetch(PDO::FETCH_ASSOC); // Récupère un seul résultat
+        }
+
+    } catch (PDOException $e) {
+        die("Erreur lors de la connexion : " . $e->getMessage());
+    }
+
+    // Retourner les résultats de la requête
+    return $result;
+}
+
 
 $sqlVerifierUserConcoursEnCours = "
          SELECT DISTINCT
