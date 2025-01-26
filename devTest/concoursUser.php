@@ -15,9 +15,8 @@ if (!isset($_SESSION['username'])) {
     } else {
         $theme = $result['theme'];
     }
-    
-    
-    
+
+
     $sqlVerifierUserPresident = "SELECT * FROM President, Concours WHERE President.numPresident = :id_user AND Concours.etat = 'En Cours';";
     $result = requeteSQL($_SESSION['id_user'], $connexion, $sqlVerifierUserPresident, false);
     if (empty($result)) {
@@ -25,10 +24,8 @@ if (!isset($_SESSION['username'])) {
     } else {
         $isPresident = true;   // L'utilisateur est Président
     }
-    
-    
-    
-    
+
+
     $sqlVerifierUserCompetiteur = "SELECT * FROM Competiteur, Concours WHERE Competiteur.numCompetiteur = :id_user AND Concours.etat = 'En Cours';";
     $result = requeteSQL($_SESSION['id_user'], $connexion, $sqlVerifierUserCompetiteur, false);
     if (empty($result)) {
@@ -81,13 +78,13 @@ if (!isset($_SESSION['username'])) {
               
               <?php if ($isPresident): ?>
                   <?php echo '<p>Vous êtes Président du concours.</p>'; ?>
-                  <?php echo '<a href="page_president.php" class="btn">Accéder à la gestion du concours</a>'; ?>
+                  <?php echo '<a href="pagePresident.php" class="btn">Accéder à la gestion du concours</a>'; ?>
               <?php elseif ($isCompetiteur): ?>
                   <?php echo '<p>Vous êtes un compétiteur du concours.</p>'; ?>
-                  <?php echo '<a href="page_competiteur.php" class="btn">Accéder à vos participations</a>'; ?>
+                  <?php echo '<a href="pageCompetiteur.php" class="btn">Accéder à vos participations</a>'; ?>
               <?php elseif ($isEvaluateur): ?>
                   <?php echo '<p>Vous êtes un évaluateur du concours.</p>'; ?>
-                  <?php echo '<a href="page_evaluateur.php" class="btn">Accéder à vos évaluations</a>'; ?>
+                  <?php echo '<a href="pageEvaluateur.php" class="btn">Accéder à vos évaluations</a>'; ?>
               <?php else: ?>
                   <?php echo '<p>Votre rôle n\'est pas défini dans le concours.</p>'; ?>
               <?php endif; ?>
