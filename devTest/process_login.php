@@ -20,10 +20,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if ($stmt->rowCount() > 0) {
             $_SESSION['username'] = $username; // Stocker le nom d'utilisateur dans la session
             $_SESSION['id_user'] =  $result['numUtilisateur'];
+            $_SESSION['badConnection'] = 0;
             header("Location: index.php"); // Rediriger vers le tableau de bord
             exit();
         } else {
-            echo "Nom d'utilisateur ou mot de passe incorrect.";
+            $_SESSION['badConnection'] = 1;
+            //echo "Nom d'utilisateur ou mot de passe incorrect.";
+            header("Location: index.php"); // Rediriger vers le tableau de bord
+            exit();
         }
     } catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());

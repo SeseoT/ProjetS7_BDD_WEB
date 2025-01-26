@@ -18,6 +18,9 @@
 
         <button type="submit">Se connecter</button>
     </form>
+    <?php if (isset($_SESSION['badConnection']) && $_SESSION['badConnection'] == 1): ?>
+        <p>Bad CONNECTION</p>
+    <?php endif; ?>
 </div>
 </body>
 </html>
