@@ -193,3 +193,39 @@ a:hover {
 .btn:hover {
     background-color: #45a049; /* Couleur plus foncée au survol */
 }
+
+.bandeauDirecteur{
+    display: flex; /* Pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre les boutons dans le bandeau */
+    align-items: center; /* Centre verticalement les éléments */
+    max-width: 1000px; /* Même largeur maximale que la div user-info */
+    margin: 20px auto; /* Centre horizontalement le bandeau et ajoute un espace en haut */
+    padding: 10px;
+    background-color: #333; /* Couleur de fond */
+    color: white;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre similaire */
+}
+.bandeauDirecteur a {
+    /*flex = 1;*/
+    color: white; /* Assure que les liens sont blancs */
+    text-decoration: none; /* Supprime le soulignement des liens */
+    margin: 0 10px; /* Ajoute de l'espace entre les liens */
+    display: inline-block;
+}
+.bandeauDirecteur a:hover {
+    background-color: #ddd; /* Change la couleur des liens au survol */
+}
+
+.formulaireNouveauParticipant{
+    display: flex; /* Pour aligner les éléments horizontalement */
+    justify-content: center; /* Centre les boutons dans le bandeau */
+    align-items: center; /* Centre verticalement les éléments */
+    max-width: 1000px; /* Même largeur maximale que la div user-info */
+    margin: 20px auto; /* Centre horizontalement le bandeau et ajoute un espace en haut */
+    padding: 10px;
+    background-color: #333; /* Couleur de fond */
+    color: white;
+    border-radius: 8px; /* Coins arrondis */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre similaire */
+}

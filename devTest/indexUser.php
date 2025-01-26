@@ -8,14 +8,16 @@ if (!isset($_SESSION['username'])) {
     exit();
 } else {
     try {
-        $sql = "SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.adresse, Club.nomClub 
-        FROM Utilisateur, Club 
-        WHERE numUtilisateur = :id_user 
+        $sql = "SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.adresse, Club.nomClub
+        FROM Utilisateur, Club
+        WHERE numUtilisateur = :id_user
         AND Utilisateur.numClub = Club.numClub";
         $stmt = $connexion->prepare($sql);
         $stmt->bindParam(':id_user', $_SESSION['id_user']);
         $stmt->execute();
         $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+
     } catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
@@ -61,8 +63,14 @@ if (!isset($_SESSION['username'])) {
     <h1>Bienvenue sur votre espace personnel</h1>
 </div>
 
+     <?php if (isset($_SESSION['isDirecteur']) && $_SESSION['isDirecteur'] == 1): ?>
+        <a href="creerUtilisateur.php" class="bandeauDirecteur">Créer Participante</a>
+        <a href="directeurChoisisConcoursAInteragir.php" class="bandeauDirecteur">Choisir Participants</a>
+     <?php endif; ?>
+
 <!-- Contenu principal -->
 <div class="container">
+
     <h2>Vos informations personnelles : </h2>
     <div class="user-info">
         <p><span class="user-data">Prénom :</span> <?= htmlspecialchars($prenom); ?></p>
@@ -70,6 +78,8 @@ if (!isset($_SESSION['username'])) {
         <p><span class="user-data">Adresse :</span> <?= htmlspecialchars($adresse); ?></p>
         <p><span class="user-data">Club :</span> <?= htmlspecialchars($nomClub); ?></p>
     </div>
+
+
 </div>
 
 </body>

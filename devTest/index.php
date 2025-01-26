@@ -16,6 +16,25 @@ if (!isset($_SESSION['username'])) {
     catch (PDOException $e) {
         die("Erreur lors de la connexion : " . $e->getMessage());
     }
+
+    try {
+        // Vérification si l'utilisateur est également un directeur
+        $sql_directeur = "SELECT Directeur.numDirecteur FROM Directeur WHERE Directeur.numDirecteur = :id_user";
+        $stmt_directeur = $connexion->prepare($sql_directeur);
+        $stmt_directeur->bindParam(':id_user', $_SESSION['id_user']);
+        $stmt_directeur->execute();
+        $is_directeur = $stmt_directeur->rowCount() == 1;
+
+        if ($is_directeur) {
+          $_SESSION['isDirecteur'] = 1;
+        }else{
+          $_SESSION['isDirecteur'] = 0;
+        }
+    }
+    catch (PDOException $e) {
+        die("Erreur lors de la connexion : " . $e->getMessage());
+    }
+
     if($stmt->rowCount() > 0){
         header("Location: indexAdmin.php"); // Rediriger vers le tableau de bord
         exit();
