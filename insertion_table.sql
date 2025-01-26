@@ -1972,6 +1972,7 @@ VALUES
     ('2024-01-17', 8.5, 'Très esthétique.', 481, 35),
 
 
+
     ('2024-01-18', 8.0, 'Travail propre.', 482, 19),
     ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 482, 29),
     ('2024-01-16', 9.0, 'Un bel équilibre.', 483, 30),
