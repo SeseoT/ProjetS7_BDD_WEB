@@ -22,7 +22,7 @@ session_start(); // Pour gérer les sessions
         <button type="submit">Se connecter</button>
     </form>
     <?php if (isset($_SESSION['badConnection']) && $_SESSION['badConnection'] == 1): ?>
-        <p>Bad CONNECTION</p>
+        <p>Nom d'utilisateur ou mot de passe incorrect.</p>
     <?php endif; ?>
 </div>
 </body>
