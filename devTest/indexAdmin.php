@@ -90,13 +90,13 @@ if (!isset($_SESSION['username'])) {
     <button id="fetchDataR5" title="Nom de la région qui a la meilleure moyenne des notes des dessins proposés.">Requete 5</button>
     <div id="dataTableR5" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR6">Requete 6</button>
+    <button id="fetchDataR6" title="Tous les évaluateurs des concours, classé par ceux qui ont évalué le plus de dessins.">Requete 6</button>
     <div id="dataTableR6" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR7">Requete 7</button>
+    <button id="fetchDataR7" title="Tous les participants de tous les concours qui ont posté le maximum de dessins (3 dessins).\n Classé du plus jeune au plus vieux.">Requete 7</button>
     <div id="dataTableR7" class="scrollable-table hidden"></div>
     <br>
-    <button id="fetchDataR8">Requete 8</button>
+    <button id="fetchDataR8" title="Connaitre l’évaluateur de chaque concours avec la meilleure moyenne donnée globale.">Requete 8</button>
     <div id="dataTableR8" class="scrollable-table hidden"></div>
 </div>
 <script>
