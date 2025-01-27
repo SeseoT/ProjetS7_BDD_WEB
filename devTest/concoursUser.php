@@ -46,6 +46,27 @@ if (!isset($_SESSION['username'])) {
     } else {
         $isEvaluateur = true;   // L'utilisateur est évaluateur
     }
+
+    
+    try {
+    $sql = "SELECT 
+                COUNT(*) as nb_concours 
+                FROM CompetiteurParticipe CP
+                INNER JOIN Concours C ON CP.numConcours = C.numConcours
+                WHERE CP.numCompetiteur = :id_user
+                AND C.dateFin >= CURDATE()
+                AND C.dateDebut <= DATE_ADD(CURDATE(), INTERVAL 365 DAY)
+                AND C.etat = 'Non commence';";
+            
+    $stmt = $connexion->prepare($sql);
+    $stmt->bindParam(':id_user', $_SESSION['id_user']);
+    $stmt->execute();
+    $concours = $stmt->fetch(PDO::FETCH_ASSOC);
+    
+    $nb_concours_proches = $concours['nb_concours'];
+} catch (PDOException $e) {
+    $nb_concours_proches = 0;
+}
 }
 ?>
 
@@ -94,6 +115,12 @@ if (!isset($_SESSION['username'])) {
           <?php endif; ?>
     </div>
 
+    <div class="container center">
+        <?php if ($nb_concours_proches > 0): ?>
+            <span class="concours-alert"><?= $nb_concours_proches ?></span>
+        <?php endif; ?>
+    </div>
+        
 </body>
 
 </html>
