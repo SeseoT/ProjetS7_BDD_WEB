@@ -115,11 +115,13 @@ if (!isset($_SESSION['username'])) {
           <?php endif; ?>
     </div>
 
-    <div class="container center">
-        <?php if ($nb_concours_proches > 0): ?>
+    
+    <?php if ($nb_concours_proches > 0): ?>
+        <div class="container center">
             <span class="concours-alert"><?= $nb_concours_proches ?></span>
-        <?php endif; ?>
-    </div>
+        </div>
+    <?php endif; ?>
+    
         
 </body>
 
