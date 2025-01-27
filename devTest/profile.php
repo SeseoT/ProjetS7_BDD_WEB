@@ -7,23 +7,6 @@ if (!isset($_SESSION['username'])) {
     header("Location: login.php");
     exit();
 } else {
-    function getQuoteOfTheDay($prenom) {
-        $citations = [
-            "« La seule limite est celle que tu te fixes, %s ! »",
-            "« %s, chaque mouvement est une chance de briller ! »",
-            "« La perfection n'est pas un acte, c'est une habitude. Continue comme ça, %s ! »",
-            "« %s, tu es capable de tout ce que tu imagines ! »",
-            "« La gymnastique est une poésie du mouvement. Écris ton histoire, %s ! »",
-            "« %s, rappelle-toi : la grâce est plus forte que la gravité ! »",
-            "« Le talent gagne des matchs, mais le travail d'équipe gagne des championnats. Bravo %s ! »"
-        ];
-        
-        $index = date('z') % count($citations); // Change chaque jour
-        return sprintf($citations[$index], $prenom);
-    }
-
-// Récupérer la citation
-$citation_du_jour = getQuoteOfTheDay($prenom);
     try {
         $sql = "SELECT Utilisateur.nom, Utilisateur.prenom, Utilisateur.adresse, Club.nomClub
         FROM Utilisateur, Club
@@ -43,6 +26,25 @@ $citation_du_jour = getQuoteOfTheDay($prenom);
         $nom = $result['nom'];
         $adresse = $result['adresse'];
         $nomClub = $result['nomClub'];
+
+        function getQuoteOfTheDay($prenom) {
+        $citations = [
+            "« La seule limite est celle que tu te fixes, %s ! »",
+            "« %s, chaque mouvement est une chance de briller ! »",
+            "« La perfection n'est pas un acte, c'est une habitude. Continue comme ça, %s ! »",
+            "« %s, tu es capable de tout ce que tu imagines ! »",
+            "« La gymnastique est une poésie du mouvement. Écris ton histoire, %s ! »",
+            "« %s, rappelle-toi : la grâce est plus forte que la gravité ! »",
+            "« Le talent gagne des matchs, mais le travail d'équipe gagne des championnats. Bravo %s ! »"
+        ];
+        
+        $index = date('z') % count($citations); // Change chaque jour
+        return sprintf($citations[$index], $prenom);
+    }
+
+    // Récupérer la citation
+    $citation_du_jour = getQuoteOfTheDay($prenom);
+        
     } else {
         $prenom = "Erreur";
         $nom = "Erreur";
