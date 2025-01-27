@@ -34,28 +34,24 @@ if (!isset($_SESSION['username'])) {
         max-height: 300px; /* Limiter la hauteur maximale */
         overflow-y: auto; /* Activer le défilement vertical */
         overflow-x: auto; /* Activer le défilement horizontal */
-        width: 100%; /* S'assurer que le tableau utilise toute la largeur du parent */
+        width: 100%; /* Le tableau utilise toute la largeur du conteneur */
         border: 1px solid #ccc; /* Ajouter une bordure pour distinguer */
         padding: 10px; /* Ajouter de l'espace interne */
         box-sizing: border-box;
         background-color: #f9f9f9; /* Couleur de fond pour lisibilité */
-        justify-content: center; /* Centrer horizontalement le contenu */
-        align-items: center; /* Centrer verticalement le contenu */
-        display: grid;
     }
 
     .scrollable-table table {
-        width: 100%; /* Assure que le tableau prend toute la largeur disponible */
-        table-layout: auto; /* Laisser les colonnes s'adapter automatiquement */
-        border-collapse: collapse; /* Suppression des espaces entre les bordures */
-        font-size: 14px; /* Taille de caractère réduite pour s'adapter */
+        min-width: 100%; /* S'assurer que le tableau prend au moins 100% de la largeur */
+        border-collapse: collapse; /* Enlever les espaces entre les bordures */
+        font-size: 14px; /* Taille de texte standard */
     }
 
     .scrollable-table th, .scrollable-table td {
-        text-align: left; /* Alignement du texte à gauche */
+        text-align: left; /* Alignement du texte */
         padding: 8px; /* Ajouter de l'espace dans les cellules */
-        border: 1px solid #ddd; /* Ajouter des bordures pour plus de lisibilité */
-        word-wrap: break-word; /* Casser les mots trop longs */
+        border: 1px solid #ddd; /* Ajouter des bordures pour lisibilité */
+        word-wrap: break-word; /* Casser les mots longs */
     }
 
     .scrollable-table th {
@@ -66,10 +62,10 @@ if (!isset($_SESSION['username'])) {
         display: none; /* Masquer les tableaux par défaut */
     }
 
-    /* Responsive: Ajuster les caractères sur des petits écrans */
+    /* Responsive: Ajustement pour les petits écrans */
     @media (max-width: 768px) {
         .scrollable-table table {
-            font-size: 12px; /* Réduire davantage la taille des caractères */
+            font-size: 12px; /* Réduire la taille du texte pour les petits écrans */
         }
     }
 
