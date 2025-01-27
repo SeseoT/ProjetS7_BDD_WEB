@@ -94,16 +94,6 @@ if (!isset($_SESSION['username'])) {
           <?php endif; ?>
     </div>
 
-
-    
-    <!-- Contenu principal -->
-    <div class="container">
-        <h2>Liste des concours passés</h2>
-        <div class="user-info">
-            <p><span class="user-data">Theme :</span> <?= htmlspecialchars($theme); ?></p>
-        </div>
-    </div>
-
 </body>
 
 </html>
