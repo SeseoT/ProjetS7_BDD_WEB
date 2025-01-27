@@ -117,7 +117,7 @@ if (!isset($_SESSION['username'])) {
 
     <div class="container center">
         <?php if ($nb_concours_proches > 0): ?>
-            <h1><?php echo '<p>Vous êtes inscrit à ' . htmlspecialchars($nb_concours_proches) . 'concours à venir</p>'; ?></h1>
+            <h1><?php echo '<p>Vous êtes inscrit à ' . htmlspecialchars($nb_concours_proches) . ' concours à venir</p>'; ?></h1>
         <?php else: ?>
             <h1><?php echo '<p>Vous n\'êtes inscrit à aucun concours à venir</p>'; ?></h1>
         <?php endif; ?>
