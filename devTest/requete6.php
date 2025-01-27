@@ -8,23 +8,7 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
     try {
-        $sql = "SELECT
-    Club.region,
-    AVG(Evaluation.note) AS MoyenneNote
-FROM
-    Evaluation, Club, Dessin, Evaluateur, Utilisateur
-WHERE
-    Dessin.numDessin = Evaluation.numDessin
-    AND Evaluation.numEvaluateur = Evaluateur.numEvaluateur
-    AND Evaluateur.numEvaluateur = Utilisateur.numUtilisateur
-    AND Utilisateur.numClub = Club.numClub
-    AND Evaluation.note IS NOT NULL
-GROUP BY
-    Club.region
-ORDER BY
-    MoyenneNote DESC
-LIMIT 1;
-";
+        $sql = "SELECT numEvaluateur, (SELECT nom FROM Utilisateur WHERE Utilisateur.numUtilisateur = Evaluateur.numEvaluateur) AS nom, (SELECT prenom FROM Utilisateur WHERE Utilisateur.numUtilisateur = Evaluateur.numEvaluateur) AS prenom, (SELECT age FROM Utilisateur WHERE Utilisateur.numUtilisateur = Evaluateur.numEvaluateur) AS age, (SELECT COUNT(*) FROM Evaluation WHERE Evaluation.numEvaluateur = Evaluateur.numEvaluateur) AS total_evaluations FROM Evaluateur WHERE numEvaluateur IN ( SELECT numEvaluateur FROM Evaluation ) ORDER BY total_evaluations DESC;";
 
         $stmt = $connexion->prepare($sql);
         $stmt->execute();
@@ -36,13 +20,19 @@ LIMIT 1;
     // Construire le tableau HTML
     $html = '<table border="1">';
     $html .= '<tr>
-                <th>Region</th>
-                <th>Note Moyenne</th>
+                <th>Numero évaluateur</th>
+                <th>Nom</th>
+                <th>Prenom</th>
+                <th>Age</th>
+                <th>Nombre évaluation</th>
                 </tr>';
     foreach ($result as $row) {
         $html .= '<tr>';
-        $html .= '<td>' . htmlspecialchars($row['region']) . '</td>';
-        $html .= '<td>' . htmlspecialchars($row['MoyenneNote']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['numEvaluateur']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['nom']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['prenom']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['age']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['total_evaluations']) . '</td>';
         $html .= '</tr>';
     }
     $html .= '</table>';

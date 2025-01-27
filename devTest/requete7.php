@@ -8,22 +8,30 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
     try {
-        $sql = "SELECT
-    Club.region,
-    AVG(Evaluation.note) AS MoyenneNote
-FROM
-    Evaluation, Club, Dessin, Evaluateur, Utilisateur
-WHERE
-    Dessin.numDessin = Evaluation.numDessin
-    AND Evaluation.numEvaluateur = Evaluateur.numEvaluateur
-    AND Evaluateur.numEvaluateur = Utilisateur.numUtilisateur
-    AND Utilisateur.numClub = Club.numClub
-    AND Evaluation.note IS NOT NULL
-GROUP BY
-    Club.region
-ORDER BY
-    MoyenneNote DESC
-LIMIT 1;
+        $sql = "SELECT 
+    (SELECT theme 
+     FROM Concours 
+     WHERE Concours.numConcours = cp.numConcours) AS themeConcours,
+    (SELECT prenom 
+     FROM Utilisateur 
+     WHERE Utilisateur.numUtilisateur = cp.numCompetiteur) AS prenomUtilisateur,
+    (SELECT nom 
+     FROM Utilisateur 
+     WHERE Utilisateur.numUtilisateur = cp.numCompetiteur) AS nomUtilisateur,
+     (SELECT age 
+     FROM Utilisateur 
+     WHERE Utilisateur.numUtilisateur = cp.numCompetiteur) AS age,
+    (SELECT COUNT(*) 
+     FROM Dessin 
+     WHERE Dessin.numConcours = cp.numConcours 
+       AND Dessin.numCompetiteur = cp.numCompetiteur) AS nombreDessins
+FROM CompetiteurParticipe cp, Utilisateur
+WHERE (SELECT COUNT(*) 
+       FROM Dessin 
+       WHERE Dessin.numConcours = cp.numConcours 
+         AND Dessin.numCompetiteur = cp.numCompetiteur) > 2
+AND cp.numCompetiteur = Utilisateur.numUtilisateur
+ORDER BY Utilisateur.age;
 ";
 
         $stmt = $connexion->prepare($sql);
@@ -36,13 +44,19 @@ LIMIT 1;
     // Construire le tableau HTML
     $html = '<table border="1">';
     $html .= '<tr>
-                <th>Region</th>
-                <th>Note Moyenne</th>
+                <th>Theme Concours</th>
+                <th>Prenom</th>
+                <th>Nom</th>
+                <th>Age</th>
+                <th>Nombre dessin</th>
                 </tr>';
     foreach ($result as $row) {
         $html .= '<tr>';
-        $html .= '<td>' . htmlspecialchars($row['region']) . '</td>';
-        $html .= '<td>' . htmlspecialchars($row['MoyenneNote']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['themeConcours']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['prenomUtilisateur']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['nomUtilisateur']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['age']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['nombreDessins']) . '</td>';
         $html .= '</tr>';
     }
     $html .= '</table>';

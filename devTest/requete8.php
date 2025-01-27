@@ -8,22 +8,21 @@ if (!isset($_SESSION['username'])) {
     exit();
 }else{//Redirection vers les pages spécialisé des clients
     try {
-        $sql = "SELECT
-    Club.region,
-    AVG(Evaluation.note) AS MoyenneNote
-FROM
-    Evaluation, Club, Dessin, Evaluateur, Utilisateur
-WHERE
-    Dessin.numDessin = Evaluation.numDessin
-    AND Evaluation.numEvaluateur = Evaluateur.numEvaluateur
-    AND Evaluateur.numEvaluateur = Utilisateur.numUtilisateur
-    AND Utilisateur.numClub = Club.numClub
-    AND Evaluation.note IS NOT NULL
-GROUP BY
-    Club.region
-ORDER BY
-    MoyenneNote DESC
-LIMIT 1;
+        $sql = "SELECT 
+    e1.numConcours,
+    e1.numEvaluateur,
+    e1.moyenne_notes
+FROM (
+    SELECT 
+        d.numConcours,
+        ev.numEvaluateur,
+        AVG(ev.note) as moyenne_notes,
+        RANK() OVER (PARTITION BY d.numConcours ORDER BY AVG(ev.note) DESC) as rang
+    FROM Evaluation ev, Dessin d
+    WHERE ev.numDessin = d.numDessin
+    GROUP BY d.numConcours, ev.numEvaluateur
+) e1
+WHERE e1.rang = 1;
 ";
 
         $stmt = $connexion->prepare($sql);
@@ -36,13 +35,15 @@ LIMIT 1;
     // Construire le tableau HTML
     $html = '<table border="1">';
     $html .= '<tr>
-                <th>Region</th>
-                <th>Note Moyenne</th>
+                <th>Numero du concours</th>
+                <th>Numero évaluateur</th>
+                <th>Note moyenne</th>
                 </tr>';
     foreach ($result as $row) {
         $html .= '<tr>';
-        $html .= '<td>' . htmlspecialchars($row['region']) . '</td>';
-        $html .= '<td>' . htmlspecialchars($row['MoyenneNote']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['numConcours']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['numEvaluateur']) . '</td>';
+        $html .= '<td>' . htmlspecialchars($row['moyenne_notes']) . '</td>';
         $html .= '</tr>';
     }
     $html .= '</table>';
