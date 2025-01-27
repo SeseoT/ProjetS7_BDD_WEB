@@ -24,7 +24,7 @@ session_start(); // Pour gérer les sessions
     <?php if (isset($_SESSION['badConnection']) && $_SESSION['badConnection'] == 1): ?>
         <p>Nom d'utilisateur ou mot de passe incorrect.</p>
     <?php endif; ?>
-    <h2 href="index.html">Retour</h2>
+    <a href="index.html">Retour</a>
 </div>
 </body>
 </html>
