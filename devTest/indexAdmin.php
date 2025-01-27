@@ -33,6 +33,7 @@ if (!isset($_SESSION['username'])) {
     .scrollable-table {
         max-height: 300px; /* Limiter la hauteur maximale */
         overflow-y: auto; /* Activer le défilement vertical */
+        overflow-x: auto; /* Activer le défilement horizontal */
         width: 100%; /* S'assurer que le tableau utilise toute la largeur du parent */
         border: 1px solid #ccc; /* Ajouter une bordure pour distinguer */
         padding: 10px; /* Ajouter de l'espace interne */
@@ -43,39 +44,33 @@ if (!isset($_SESSION['username'])) {
         display: grid;
     }
 
+    .scrollable-table table {
+        width: 100%; /* Assure que le tableau prend toute la largeur disponible */
+        table-layout: auto; /* Laisser les colonnes s'adapter automatiquement */
+        border-collapse: collapse; /* Suppression des espaces entre les bordures */
+        font-size: 14px; /* Taille de caractère réduite pour s'adapter */
+    }
+
+    .scrollable-table th, .scrollable-table td {
+        text-align: left; /* Alignement du texte à gauche */
+        padding: 8px; /* Ajouter de l'espace dans les cellules */
+        border: 1px solid #ddd; /* Ajouter des bordures pour plus de lisibilité */
+        word-wrap: break-word; /* Casser les mots trop longs */
+    }
+
+    .scrollable-table th {
+        background-color: #f2f2f2; /* Couleur d'en-tête plus claire */
+    }
+
     .scrollable-table.hidden {
-        display: none;
+        display: none; /* Masquer les tableaux par défaut */
     }
 
-    /* Overlay (flou + texte au centre) */
-    .overlay {
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5); /* Fond semi-transparent */
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 1000; /* Toujours au-dessus */
-        opacity: 0;
-        pointer-events: none;
-        transition: opacity 0.3s ease;
-    }
-
-    .overlay.active {
-        opacity: 1;
-        pointer-events: all;
-    }
-
-    .overlay-text {
-        color: white;
-        font-size: 24px;
-        text-align: center;
-        padding: 20px;
-        background: rgba(0, 0, 0, 0.7);
-        border-radius: 8px;
+    /* Responsive: Ajuster les caractères sur des petits écrans */
+    @media (max-width: 768px) {
+        .scrollable-table table {
+            font-size: 12px; /* Réduire davantage la taille des caractères */
+        }
     }
 
 
@@ -108,14 +103,7 @@ if (!isset($_SESSION['username'])) {
     <button id="fetchDataR8">Requete 8</button>
     <div id="dataTableR8" class="scrollable-table hidden"></div>
 </div>
-<div class="overlay" id="tooltipOverlay">
-    <div class="overlay-text" id="tooltipText"></div>
-</div>
 <script>
-    const overlay = document.getElementById("tooltipOverlay");
-    const overlayText = document.getElementById("tooltipText");
-    let alreadyShownR1 = false; // Variable pour vérifier si l'overlay a été affiché pour ce bouton
-
 
     document.getElementById('fetchDataR1').addEventListener('click', () => {
         fetch('requete1.php')
@@ -127,7 +115,6 @@ if (!isset($_SESSION['username'])) {
                     document.getElementById('dataTableR1').classList.remove("hidden");
                 }else{
                     document.getElementById('dataTableR1').classList.add("hidden");
-                    alreadyShownR1 =false;
                 }
             })
             .catch(error => console.error('Erreur:', error));
