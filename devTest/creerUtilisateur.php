@@ -30,7 +30,7 @@ else {
 
         try {
          $sql_CreerUtilisateur = "INSERT INTO Utilisateur (nom, prenom,age , adresse, login, motDePasse, numClub)
-               VALUES (:numUtilisateur, :nom, :prenom, :age, :adresse,:login,:motDePasse, :numClub)";
+               VALUES (:nom, :prenom, :age, :adresse,:login,:motDePasse, :numClub)";
           $stmt_CreerUtilisateur = $connexion->prepare($sql_CreerUtilisateur);
 
           // Liaison des paramètres
