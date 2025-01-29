@@ -1,0 +1,95 @@
+@startuml
+left to right direction
+
+object Utilisateur{
+   <u>numUtilisateur</u>
+   nom
+   prénom
+   age
+   adresse
+   email
+   login
+   motDePasse
+}
+
+object Club{
+    <u>numClub</u>
+    nomClub
+    adresse
+    numTélephone
+    nombreAdhérents
+    ville
+    département
+    région
+}
+
+object Concours{
+    <u>numConcours</u>
+    thème
+    dateDebut
+    dateFin
+    etat
+    descriptif
+}
+
+object Président{
+    prime
+}
+
+object Administrateur{
+    dateDébut
+}
+
+object Directeur {
+    dateDébut
+}
+
+object Evaluateur{
+    spécialité
+}
+
+object Evaluation{
+    dateEvaluation
+    note
+    commentaire
+}
+
+object Dessin{
+    <u>numDessin</u>
+    commentaire
+    classement
+    dateRemise
+    leDessin
+}
+
+object Compétiteur{
+    datePremièreParticipation
+}
+
+Club "1" -- "1" Directeur : Dirige
+Club "1" -- "*" Utilisateur : Adhérents→
+Club "*" -- "*" Concours : Participe
+
+Concours "1" -- "*" Dessin : porte sur→
+
+Compétiteur "*" -- "*" Concours : participe→
+Compétiteur --|> Utilisateur
+Compétiteur "1" -- "*" Dessin : soumet→
+
+Dessin "*" -- "2" Evaluateur : évalue
+
+Evaluateur "*" -- "*" Concours : ←jury
+Evaluateur --|> Utilisateur
+
+Président "1" -- "*" Concours : ←préside
+Président --|> Utilisateur
+
+Administrateur --|> Utilisateur
+
+Directeur --|> Utilisateur
+Evaluation .. Evaluateur
+
+Club -[hidden]-> Utilisateur
+Concours -[hidden]-> Président
+Evaluateur -[hidden]-> Administrateur
+@enduml

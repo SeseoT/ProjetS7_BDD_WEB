@@ -1386,7 +1386,7 @@ VALUES
     ('2024-01-16', 8.5, 'Bon travail sur les formes.', 235, 30),
     ('2024-01-17', 9.0, 'Créatif et moderne.', 236, 23),
     ('2024-01-17', 8.5, 'Design intéressant.', 236, 22),
-    ('2024-01-15', 9.5, 'Excellent.', 237, 18),
+    ('2024-01-15', 9.5, 'Excellent.', 237, 19),
     ('2024-01-15', 8.0, 'Bien realise.', 237, 41),
 
 
@@ -1410,9 +1410,9 @@ VALUES
     ('2024-01-16', 9.0, 'Design innovant.', 246, 47),
     ('2024-01-16', 8.5, 'Bonne utilisation des éléments graphiques.', 246, 20),
     ('2024-01-17', 8.0, 'Bon concept.', 247, 19),
-    ('2024-01-17', 8.5, 'Concept intéressant.', 247, 48),
-    ('2024-01-18', 9.0, 'Bon travail sur les formes.', 248, 49),
-    ('2024-01-18', 8.5, 'Très joli rendu.', 248, 50),
+    ('2024-01-17', 8.5, 'Concept intéressant.', 247, 26),
+    ('2024-01-18', 9.0, 'Bon travail sur les formes.', 248, 39),
+    ('2024-01-18', 8.5, 'Très joli rendu.', 248, 33),
 
 
 
@@ -1528,24 +1528,24 @@ VALUES
 
 
 
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 295, 40),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 295, 41),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 296, 42),
-    ('2024-01-17', 9.0, 'Très réussi.', 296, 43),
-    ('2024-01-18', 8.0, 'Design soigné.', 297, 44),
-    ('2024-01-18', 8.5, 'Concept original.', 297, 45),
-    ('2024-01-15', 9.5, 'Exceptionnel.', 298, 46),
-    ('2024-01-15', 8.0, 'Bien maîtrisé.', 298, 47),
-    ('2024-01-17', 9.0, 'Excellente harmonie.', 299, 50),
-    ('2024-01-17', 8.5, 'Très esthétique.', 299, 51),
-    ('2024-01-18', 8.0, 'Travail propre.', 300, 52),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 300, 53),
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 301, 54),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 301, 55),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 302, 56),
-    ('2024-01-17', 9.0, 'Très réussi.', 302, 57),
-    ('2024-01-18', 8.0, 'Design soigné.', 303, 58),
-    ('2024-01-18', 8.5, 'Concept original.', 303, 59),
+    ('2024-01-16', 9.0, 'Un bel équilibre.', 295, 22),
+    ('2024-01-16', 8.5, 'Approche intéressante.', 295, 29),
+    ('2024-01-17', 8.5, 'Inspiration moderne.', 296, 37),
+    ('2024-01-17', 9.0, 'Très réussi.', 296, 45),
+    ('2024-01-18', 8.0, 'Design soigné.', 297, 33),
+    ('2024-01-18', 8.5, 'Concept original.', 297, 23),
+    ('2024-01-15', 9.5, 'Exceptionnel.', 298, 27),
+    ('2024-01-15', 8.0, 'Bien maîtrisé.', 298, 35),
+    ('2024-01-17', 9.0, 'Excellente harmonie.', 299, 36),
+    ('2024-01-17', 8.5, 'Très esthétique.', 299, 47),
+    ('2024-01-18', 8.0, 'Travail propre.', 300, 28),
+    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 300, 22),
+    ('2024-01-16', 9.0, 'Un bel équilibre.', 301, 37),
+    ('2024-01-16', 8.5, 'Approche intéressante.', 301, 46),
+    ('2024-01-17', 8.5, 'Inspiration moderne.', 302, 36),
+    ('2024-01-17', 9.0, 'Très réussi.', 302, 39),
+    ('2024-01-18', 8.0, 'Design soigné.', 303, 22),
+    ('2024-01-18', 8.5, 'Concept original.', 303, 34),
 
 
 
@@ -1554,7 +1554,7 @@ VALUES
     ('2024-01-17', 9.0, 'Excellente harmonie.', 305, 47),
     ('2024-01-17', 8.5, 'Très esthétique.', 305, 19),
     ('2024-01-18', 8.0, 'Travail propre.', 306, 45),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 306, 45),
+    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 306, 33),
     ('2024-01-16', 9.0, 'Un bel équilibre.', 307, 20),
     ('2024-01-16', 8.5, 'Approche intéressante.', 307, 47),
     ('2024-01-17', 8.5, 'Inspiration moderne.', 308, 35),
@@ -1599,7 +1599,7 @@ VALUES
     ('2024-01-18', 8.0, 'Travail propre.', 324, 33),
     ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 324, 35),
     ('2024-01-16', 9.0, 'Un bel équilibre.', 325, 20),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 325, 20),
+    ('2024-01-16', 8.5, 'Approche intéressante.', 325, 28),
     ('2024-01-17', 8.5, 'Inspiration moderne.', 326, 19),
     ('2024-01-17', 9.0, 'Très réussi.', 326, 38),
 
@@ -1878,7 +1878,6 @@ VALUES
     ('2024-01-18', 8.0, 'Design soigné.', 441, 40),
     ('2024-01-18', 8.5, 'Concept original.', 441, 25),
 
-
     ('2024-01-15', 9.5, 'Exceptionnel.', 442, 29),
     ('2024-01-15', 8.0, 'Bien maîtrisé.', 442, 32),
     ('2024-01-17', 9.0, 'Excellente harmonie.', 443, 35),
@@ -1893,7 +1892,6 @@ VALUES
     ('2024-01-17', 9.0, 'Très réussi.', 447, 34),
     ('2024-01-18', 8.0, 'Design soigné.', 448, 40),
     ('2024-01-18', 8.5, 'Concept original.', 448, 19),
-
 
     ('2024-01-15', 9.5, 'Exceptionnel.', 449, 26),
     ('2024-01-15', 8.0, 'Bien maîtrisé.', 449, 20),
@@ -1919,80 +1917,71 @@ VALUES
     ('2024-01-16', 8.5, 'Approche intéressante.', 458, 19),
     ('2024-01-17', 8.5, 'Inspiration moderne.', 459, 34),
     ('2024-01-17', 9.0, 'Très réussi.', 459, 33),
-    ('2024-01-18', 8.0, 'Design soigné.', 460, 39),
-    ('2024-01-18', 8.5, 'Concept original.', 460, 28),
     ('2024-01-15', 9.5, 'Exceptionnel.', 461, 20),
     ('2024-01-15', 8.0, 'Bien maîtrisé.', 461, 29),
-
-
     ('2024-01-17', 9.0, 'Excellente harmonie.', 462, 19),
     ('2024-01-17', 8.5, 'Très esthétique.', 462, 41),
     ('2024-01-17', 9.0, 'Excellente harmonie.', 463, 25),
-    ('2024-01-17', 8.5, 'Très esthétique.', 463, 40),
-    ('2024-01-18', 8.0, 'Travail propre.', 464, 32),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 464, 26),
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 465, 20),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 465, 41),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 466, 19),
-    ('2024-01-17', 9.0, 'Très réussi.', 466, 29),
-    ('2024-01-18', 8.0, 'Design soigné.', 467, 27),
-    ('2024-01-18', 8.5, 'Concept original.', 467, 39),
+        ('2024-01-17', 8.5, 'Très esthétique.', 463, 40),
+        ('2024-01-18', 8.0, 'Travail propre.', 464, 32),
+        ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 464, 26),
+        ('2024-01-16', 9.0, 'Un bel équilibre.', 465, 20),
+        ('2024-01-16', 8.5, 'Approche intéressante.', 465, 41),
+        ('2024-01-17', 8.5, 'Inspiration moderne.', 466, 19),
+        ('2024-01-17', 9.0, 'Très réussi.', 466, 29),
+        ('2024-01-18', 8.0, 'Design soigné.', 467, 27),
+        ('2024-01-18', 8.5, 'Concept original.', 467, 39),
 
 
-    ('2024-01-15', 9.5, 'Exceptionnel.', 468, 33),
-    ('2024-01-15', 8.0, 'Bien maîtrisé.', 468, 20),
-    ('2024-01-17', 9.0, 'Excellente harmonie.', 469, 25),
-    ('2024-01-17', 8.5, 'Très esthétique.', 469, 34),
-    ('2024-01-18', 8.0, 'Travail propre.', 470, 19),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 470, 27),
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 471, 30),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 471, 32),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 472, 35),
-    ('2024-01-17', 9.0, 'Très réussi.', 472, 25),
-    ('2024-01-18', 8.0, 'Design soigné.', 473, 30),
-    ('2024-01-18', 8.5, 'Concept original.', 473, 19),
+        ('2024-01-15', 9.5, 'Exceptionnel.', 468, 33),
+        ('2024-01-15', 8.0, 'Bien maîtrisé.', 468, 20),
+        ('2024-01-17', 9.0, 'Excellente harmonie.', 469, 25),
+        ('2024-01-17', 8.5, 'Très esthétique.', 469, 34),
+        ('2024-01-18', 8.0, 'Travail propre.', 470, 19),
+        ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 470, 27),
+        ('2024-01-16', 9.0, 'Un bel équilibre.', 471, 30),
+        ('2024-01-16', 8.5, 'Approche intéressante.', 471, 32),
+        ('2024-01-17', 8.5, 'Inspiration moderne.', 472, 35),
+        ('2024-01-17', 9.0, 'Très réussi.', 472, 25),
+        ('2024-01-18', 8.0, 'Design soigné.', 473, 30),
+        ('2024-01-18', 8.5, 'Concept original.', 473, 19),
 
-
-
-    ('2024-01-15', 9.5, 'Exceptionnel.', 474, 40),
-    ('2024-01-15', 8.0, 'Bien maîtrisé.', 474, 30),
-    ('2024-01-17', 9.0, 'Excellente harmonie.', 475, 25),
-    ('2024-01-17', 8.5, 'Très esthétique.', 475, 35),
-    ('2024-01-18', 8.0, 'Travail propre.', 476, 32),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 476, 30),
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 477, 27),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 477, 41),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 478, 34),
-    ('2024-01-17', 9.0, 'Très réussi.', 478, 25),
-    ('2024-01-18', 8.0, 'Design soigné.', 479, 39),
-    ('2024-01-18', 8.5, 'Concept original.', 479, 33),
-    ('2024-01-15', 9.5, 'Exceptionnel.', 480, 26),
-    ('2024-01-15', 8.0, 'Bien maîtrisé.', 480, 40),
-    ('2024-01-17', 9.0, 'Excellente harmonie.', 481, 29),
-    ('2024-01-17', 8.5, 'Très esthétique.', 481, 35),
+        ('2024-01-15', 9.5, 'Exceptionnel.', 474, 40),
+        ('2024-01-15', 8.0, 'Bien maîtrisé.', 474, 30),
+        ('2024-01-17', 9.0, 'Excellente harmonie.', 475, 25),
+        ('2024-01-17', 8.5, 'Très esthétique.', 475, 35),
+        ('2024-01-18', 8.0, 'Travail propre.', 476, 32),
+        ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 476, 30),
+        ('2024-01-17', 8.5, 'Inspiration moderne.', 478, 34),
+        ('2024-01-17', 9.0, 'Très réussi.', 478, 25),
+        ('2024-01-18', 8.0, 'Design soigné.', 479, 39),
+        ('2024-01-18', 8.5, 'Concept original.', 479, 33),
+        ('2024-01-15', 9.5, 'Exceptionnel.', 480, 26),
+        ('2024-01-15', 8.0, 'Bien maîtrisé.', 480, 40),
+        ('2024-01-17', 9.0, 'Excellente harmonie.', 481, 29),
+        ('2024-01-17', 8.5, 'Très esthétique.', 481, 35),
 
 
 
-    ('2024-01-18', 8.0, 'Travail propre.', 482, 19),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 482, 29),
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 483, 30),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 483, 40),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 484, 30),
-    ('2024-01-17', 9.0, 'Très réussi.', 484, 20),
-    ('2024-01-18', 8.0, 'Design soigné.', 485, 33),
-    ('2024-01-18', 8.5, 'Concept original.', 485, 31),
+        ('2024-01-18', 8.0, 'Travail propre.', 482, 31),
+        ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 482, 29),
+        ('2024-01-16', 9.0, 'Un bel équilibre.', 483, 30),
+        ('2024-01-16', 8.5, 'Approche intéressante.', 483, 40),
+        ('2024-01-17', 8.5, 'Inspiration moderne.', 484, 30),
+        ('2024-01-17', 9.0, 'Très réussi.', 484, 20),
+        ('2024-01-18', 8.0, 'Design soigné.', 485, 33),
+        ('2024-01-18', 8.5, 'Concept original.', 485, 31),
 
 
 
-    ('2024-01-18', 8.0, 'Travail propre.', 486, 29),
-    ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 486, 45),
+        ('2024-01-18', 8.0, 'Travail propre.', 486, 29),
+        ('2024-01-18', 8.5, 'Bonne ambiance visuelle.', 486, 45),
 
 
-    ('2024-01-16', 9.0, 'Un bel équilibre.', 487, 31),
-    ('2024-01-16', 8.5, 'Approche intéressante.', 487, 41),
-    ('2024-01-17', 8.5, 'Inspiration moderne.', 488, 32),
-    ('2024-01-17', 9.0, 'Très réussi.', 488, 29);
-
+        ('2024-01-16', 9.0, 'Un bel équilibre.', 487, 31),
+        ('2024-01-16', 8.5, 'Approche intéressante.', 487, 41),
+        ('2024-01-17', 8.5, 'Inspiration moderne.', 488, 32),
+        ('2024-01-17', 9.0, 'Très réussi.', 488, 29);
 
 -- Table ClubParticipe (Assurer qu'il y a au moins 6 clubs dans chaque concours)
 INSERT INTO ClubParticipe (numClub, numConcours)
