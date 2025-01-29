@@ -29,12 +29,11 @@ else {
      if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['create'])) {
 
         try {
-         $sql_CreerUtilisateur = "INSERT INTO Utilisateur (numUtilisateur, nom, prenom,age , adresse, login, motDePasse, numClub)
-               VALUES (:numUtilisateur, :nom, :prenom, :age, :adresse,:login,:motDePasse, :numClub)";
+         $sql_CreerUtilisateur = "INSERT INTO Utilisateur (nom, prenom,age , adresse, login, motDePasse, numClub)
+               VALUES (:nom, :prenom, :age, :adresse,:login,:motDePasse, :numClub)";
           $stmt_CreerUtilisateur = $connexion->prepare($sql_CreerUtilisateur);
 
           // Liaison des paramètres
-          $stmt_CreerUtilisateur->bindParam(':numUtilisateur', $_POST['numUtilisateur']);
           $stmt_CreerUtilisateur->bindParam(':nom', $_POST['nom']);
           $stmt_CreerUtilisateur->bindParam(':prenom', $_POST['prenom']);
           $stmt_CreerUtilisateur->bindParam(':age', $_POST['age']);
@@ -93,9 +92,6 @@ else {
     <h2>Vos informations personnelles : </h2>
     <div class="formulaireNouveauParticipant">
         <form method="POST" action="">
-
-            <label for="numUtilisateur">numUtilisateur :</label>
-            <input type="text" id="numUtilisateur" name="numUtilisateur" required>
 
             <label for="nom">Nom :</label>
             <input type="text" id="nom" name="nom" required>

@@ -26,6 +26,25 @@ if (!isset($_SESSION['username'])) {
         $nom = $result['nom'];
         $adresse = $result['adresse'];
         $nomClub = $result['nomClub'];
+
+        function getQuoteOfTheDay($prenom) {
+        $citations = [
+            "« La seule limite est celle que tu te fixes, %s ! »",
+            "« %s, chaque mouvement est une chance de briller ! »",
+            "« La perfection n'est pas un acte, c'est une habitude. Continue comme ça, %s ! »",
+            "« %s, tu es capable de tout ce que tu imagines ! »",
+            "« La gymnastique est une poésie du mouvement. Écris ton histoire, %s ! »",
+            "« %s, rappelle-toi : la grâce est plus forte que la gravité ! »",
+            "« Le talent gagne des matchs, mais le travail d'équipe gagne des championnats. Bravo %s ! »"
+        ];
+        
+        $index = date('z') % count($citations); // Change chaque jour
+        return sprintf($citations[$index], $prenom);
+    }
+
+    // Récupérer la citation
+    $citation_du_jour = getQuoteOfTheDay($prenom);
+        
     } else {
         $prenom = "Erreur";
         $nom = "Erreur";
@@ -46,6 +65,35 @@ if (!isset($_SESSION['username'])) {
     <link rel="stylesheet" href="style.css">
     <!-- Script JS -->
     <script src="script.js"></script>
+
+    <style>
+.citation-container {
+    background: linear-gradient(45deg, #f3f4f6, #ffffff);
+    padding: 20px;
+    border-radius: 15px;
+    margin: 20px 0;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.citation-texte {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #2c3e50;
+    text-align: center;
+    margin: 0;
+}
+
+.citation-container::before {
+    content: '"';
+    position: absolute;
+    top: -20px;
+    left: 20px;
+    font-size: 60px;
+    color: #ddd;
+    font-family: serif;
+}
+</style>
 </head>
 
 <body>
@@ -79,6 +127,9 @@ if (!isset($_SESSION['username'])) {
         <p><span class="user-data">Club :</span> <?= htmlspecialchars($nomClub); ?></p>
     </div>
 
+<div class="citation-container">
+    <p class="citation-texte"><?= htmlspecialchars($citation_du_jour); ?></p>
+</div>
 
 </div>
 
